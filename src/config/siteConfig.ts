@@ -157,7 +157,11 @@ export const siteConfig = {
     resumo: 'São Paulo (SP), Osasco, Cotia, Barueri, Santana de Parnaíba e Alphaville',
     sp: ['Barra Funda', 'Vila Leopoldina', 'Perdizes', 'Vila Mariana', 'Região Central', 'Zona Sul'],
   },
-  responsavel: { nome: '[A DEFINIR]', cargo: 'Responsável técnico', bio: '[A DEFINIR]' },
+  responsavel: {
+    nome: 'Equipe Signature Pisos',
+    cargo: 'Quem assina a obra',
+    bio: 'Empresa experiente no ramo de pisos e paredes, com equipe especializada e profissional.',
+  },
   form: {
     provider: 'web3forms' as 'web3forms' | 'formspree' | 'whatsapp-only',
     endpoint: 'https://api.web3forms.com/submit',

@@ -9,14 +9,16 @@ const { items } = Astro.props;
 
 <nav aria-label="Trilha de navegação" class="border-b border-line bg-paper">
   <Container>
-    <ol class="flex flex-wrap items-center py-2 text-base text-ink-soft">
+    <ol class="flex flex-nowrap items-center py-2 text-base text-ink-soft sm:flex-wrap">
       {
         items.map((it, i) => {
           const last = i === items.length - 1;
+          // No mobile (<sm) mostra só o item pai direto + a página atual, em uma linha.
+          const hideOnMobile = !last && i < items.length - 2;
           return (
-            <li class="flex items-center">
+            <li class={`items-center ${last ? 'flex min-w-0' : hideOnMobile ? 'hidden sm:flex' : 'flex'}`}>
               {last ? (
-                <span aria-current="page" class="font-semibold text-graphite">{it.name}</span>
+                <span aria-current="page" class="truncate font-semibold text-graphite sm:overflow-visible sm:whitespace-normal">{it.name}</span>
               ) : (
                 <>
                   <a href={it.path} class="inline-flex min-h-11 min-w-11 items-center text-accent-strong underline hover:text-graphite">{it.name}</a>
