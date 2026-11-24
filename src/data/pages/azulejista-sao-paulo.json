@@ -1,0 +1,25 @@
+{
+  "title": "Azulejista em São Paulo | Signature Pisos",
+  "description": "Assentamento de azulejo, cerâmica e porcelanato em piso e parede, com nivelamento e rejunte caprichado. Orçamento pelo WhatsApp, sem compromisso.",
+  "h1": "Azulejista em São Paulo",
+  "hero_subtitle": "Assentamento de azulejos, cerâmicas e porcelanatos com nivelamento, espaçadores, rejunte e acabamento de cantos.",
+  "sobre_texto": "Azulejo bem assentado depende menos do material e mais da base. Antes de colar a primeira peça, verificamos prumo, nível e regularização do contrapiso ou da parede. Em banheiros e cozinhas de prédios antigos da Região Central e da Barra Funda, é comum encontrar desnível que, ignorado, aparece como degrau entre as peças.\n\nUsamos argamassa colante compatível com a peça e o local, espaçadores para manter a junta uniforme e rejunte aplicado depois da cura. Em áreas molhadas, a impermeabilização vem antes do revestimento, e isso também vale para casas e sobrados da Zona Sul. Os cantos e as paradas ganham acabamento cuidadoso, porque é onde o serviço mal feito mais se mostra.",
+  "faq": [
+    {
+      "pergunta": "Dá para assentar azulejo novo sobre o antigo?",
+      "resposta": "Às vezes, se o antigo estiver firme, sem peças ocas ou soltas. Isso reduz a quebra, mas aumenta a espessura. Testamos a aderência antes de decidir se compensa ou se é melhor remover."
+    },
+    {
+      "pergunta": "A impermeabilização é feita junto com o assentamento?",
+      "resposta": "Em áreas molhadas ela precisa vir antes do revestimento. Informamos no orçamento se ela está incluída ou se deve ser feita por outro profissional. Pular essa etapa causa infiltração depois."
+    },
+    {
+      "pergunta": "Quem fornece argamassa e rejunte?",
+      "resposta": "Isso é combinado no orçamento. O importante é usar argamassa adequada ao tipo da peça e ao local, por exemplo porcelanato em área externa pede produto específico. Explicamos a escolha antes de comprar."
+    },
+    {
+      "pergunta": "Quanto tempo leva um banheiro de apartamento?",
+      "resposta": "Em geral de 3 a 6 dias, contando regularização, impermeabilização, assentamento e rejunte, com tempo de cura entre as etapas. O prazo varia com a área, a base e a retirada do revestimento antigo."
+    }
+  ]
+}
