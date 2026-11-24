@@ -61,8 +61,8 @@ const ld = [
     subtitle={content.hero_subtitle}
     photo={coverFor(loc.servico)}
     tonal={{ service, index: serviceIndex }}
-    secondaryHref="#contato"
-    secondaryLabel="Ir para o formulário"
+    secondaryHref={`/servicos/${service.slug}/`}
+    secondaryLabel="Ver este serviço em outras cidades"
     whatsappMessage={message}
   />
 
@@ -101,7 +101,7 @@ const ld = [
 
   <CtaBand message={message} />
 
-  <Section tone="sand" id="contato" labelledby="sec-contato">
-    <ContactForm headingId="sec-contato" defaultService={loc.servico} defaultCity={loc.cidade} />
+  <Section tone="paper" compact id="contato" labelledby="sec-contato" class="border-t border-line">
+    <ContactForm compact headingId="sec-contato" defaultService={loc.servico} defaultCity={loc.cidade} />
   </Section>
 </BaseLayout>

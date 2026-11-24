@@ -43,3 +43,8 @@ export function coverFor(servico: string): Photo | undefined {
 }
 
 export const heroPhoto = getPhoto('foto-29');
+
+/** Todas as fotos publicadas (galeria geral "Obras"). */
+export function allPhotos(): Photo[] {
+  return photos;
+}

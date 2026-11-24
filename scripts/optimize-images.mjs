@@ -40,6 +40,17 @@ const PHOTOS = [
   ['foto-35', 'cimento-queimado', 'galeria', 'Paredes de cimento queimado cinza ao lado de uma porta branca'],
   ['foto-36', 'cimento-queimado', 'galeria', 'Parede de banheiro com a base do cimento queimado aplicada em manchas, antes do acabamento'],
   ['foto-37', 'cimento-queimado', 'galeria', 'Banheiro com paredes em cimento queimado cinza, vaso sanitário e bancada protegida'],
+  // Fotos adicionadas apos autorizacao do cliente (todas as 39 liberadas, exceto duplicatas 15/22/23 da foto-14).
+  ['foto-03', 'porcelanato-liquido', 'galeria', 'Piso brilhante em resina azul acinzentada numa sala com lareira, refletindo a janela e os móveis'],
+  ['foto-04', 'porcelanato-liquido', 'galeria', 'Piso branco marmorizado com veios escuros e acabamento brilhante, em um cômodo com rodapé branco'],
+  ['foto-11', 'porcelanato-liquido', 'galeria', 'Corredor longo com piso claro marmorizado e brilhante, janelas à esquerda e fita azul de proteção nos pilares'],
+  ['foto-12', 'porcelanato-liquido', 'galeria', 'Piso de cozinha branco marmorizado com veios cinza e acabamento brilhante, entre armários brancos', { bottomPct: 0.12 }],
+  ['foto-20', 'obras', 'galeria', 'Parede cinza com textura de concreto e veios escuros irregulares, acabamento brilhante, ao lado de piso claro'],
+  ['foto-30', 'cimento-queimado', 'galeria', 'Banheiro em obra com paredes em cimento queimado cinza, bancada protegida com plástico e fitas verdes de proteção'],
+  ['foto-33', 'cimento-queimado', 'galeria', 'Parede de cimento queimado cinza com textura manchada de desempenadeira, acima de bancada protegida'],
+  ['foto-34', 'cimento-queimado', 'galeria', 'Canto de parede em cimento queimado cinza claro com textura de desempenadeira, ao lado de bancada protegida'],
+  ['foto-38', 'cimento-queimado', 'galeria', 'Vaso sanitário branco em banheiro com paredes em cimento queimado cinza e fita verde de proteção no piso'],
+  ['foto-39', 'cimento-queimado', 'galeria', 'Parede de cimento queimado em tons de cinza e marrom com textura aplicada à desempenadeira'],
 ];
 
 async function loadBase(file, opts) {

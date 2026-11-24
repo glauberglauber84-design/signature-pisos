@@ -328,5 +328,135 @@
     "alt": "Banheiro com paredes em cimento queimado cinza, vaso sanitário e bancada protegida",
     "servico": "cimento-queimado",
     "uso": "galeria"
+  },
+  {
+    "id": "foto-03",
+    "widths": [
+      320,
+      480,
+      640,
+      736
+    ],
+    "width": 736,
+    "height": 736,
+    "alt": "Piso brilhante em resina azul acinzentada numa sala com lareira, refletindo a janela e os móveis",
+    "servico": "porcelanato-liquido",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-04",
+    "widths": [
+      320,
+      480
+    ],
+    "width": 480,
+    "height": 639,
+    "alt": "Piso branco marmorizado com veios escuros e acabamento brilhante, em um cômodo com rodapé branco",
+    "servico": "porcelanato-liquido",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-11",
+    "widths": [
+      320,
+      480,
+      490
+    ],
+    "width": 490,
+    "height": 626,
+    "alt": "Corredor longo com piso claro marmorizado e brilhante, janelas à esquerda e fita azul de proteção nos pilares",
+    "servico": "porcelanato-liquido",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-12",
+    "widths": [
+      320,
+      480,
+      640,
+      719
+    ],
+    "width": 719,
+    "height": 784,
+    "alt": "Piso de cozinha branco marmorizado com veios cinza e acabamento brilhante, entre armários brancos",
+    "servico": "porcelanato-liquido",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-20",
+    "widths": [
+      320,
+      480
+    ],
+    "width": 480,
+    "height": 640,
+    "alt": "Parede cinza com textura de concreto e veios escuros irregulares, acabamento brilhante, ao lado de piso claro",
+    "servico": "obras",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-30",
+    "widths": [
+      320,
+      480,
+      612
+    ],
+    "width": 612,
+    "height": 825,
+    "alt": "Banheiro em obra com paredes em cimento queimado cinza, bancada protegida com plástico e fitas verdes de proteção",
+    "servico": "cimento-queimado",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-33",
+    "widths": [
+      320,
+      480,
+      573
+    ],
+    "width": 573,
+    "height": 756,
+    "alt": "Parede de cimento queimado cinza com textura manchada de desempenadeira, acima de bancada protegida",
+    "servico": "cimento-queimado",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-34",
+    "widths": [
+      320,
+      480,
+      591
+    ],
+    "width": 591,
+    "height": 779,
+    "alt": "Canto de parede em cimento queimado cinza claro com textura de desempenadeira, ao lado de bancada protegida",
+    "servico": "cimento-queimado",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-38",
+    "widths": [
+      320,
+      480,
+      606
+    ],
+    "width": 606,
+    "height": 826,
+    "alt": "Vaso sanitário branco em banheiro com paredes em cimento queimado cinza e fita verde de proteção no piso",
+    "servico": "cimento-queimado",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-39",
+    "widths": [
+      320,
+      480,
+      569
+    ],
+    "width": 569,
+    "height": 754,
+    "alt": "Parede de cimento queimado em tons de cinza e marrom com textura aplicada à desempenadeira",
+    "servico": "cimento-queimado",
+    "uso": "galeria"
   }
 ]

@@ -16,7 +16,7 @@ import { localBusinessLd, websiteLd } from '../lib/schema';
 validateContent();
 const { data: home, missing } = getHome();
 const sp = siteConfig.cities[0];
-const showcase = ['foto-29', 'foto-09', 'foto-31', 'foto-24', 'foto-14', 'foto-02'].map(getPhoto);
+const showcase = ['foto-29', 'foto-09', 'foto-31', 'foto-24', 'foto-20', 'foto-02'].map(getPhoto);
 ---
 
 <BaseLayout
@@ -54,12 +54,15 @@ const showcase = ['foto-29', 'foto-09', 'foto-31', 'foto-24', 'foto-14', 'foto-0
   </Section>
 
   <Section labelledby="sec-galeria">
-    <Gallery photos={showcase} headingId="sec-galeria" heading="Trabalhos realizados" />
+    <Gallery photos={showcase} headingId="sec-galeria" heading="Trabalhos realizados" initial={6} />
+    <p class="mt-6 text-base text-graphite">
+      <a href="/servicos/#sec-obras" class="font-semibold text-accent-strong underline">Ver todas as obras</a>
+    </p>
   </Section>
 
   <CtaBand />
 
-  <Section tone="sand" id="contato" labelledby="sec-contato">
-    <ContactForm headingId="sec-contato" />
+  <Section tone="paper" compact id="contato" labelledby="sec-contato" class="border-t border-line">
+    <ContactForm compact headingId="sec-contato" />
   </Section>
 </BaseLayout>

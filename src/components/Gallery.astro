@@ -7,17 +7,20 @@ interface Props {
   photos: Photo[];
   headingId: string;
   heading?: string;
+  /** Quantas fotos aparecem antes do botão "Ver mais fotos". */
+  initial?: number;
 }
-const { photos, headingId, heading = 'Galeria de trabalhos' } = Astro.props;
+const { photos, headingId, heading = 'Galeria de trabalhos', initial = 6 } = Astro.props;
+const extra = Math.max(0, photos.length - initial);
 ---
 
 {
   photos.length > 0 && (
     <div>
       <h2 id={headingId} class="text-2xl md:text-3xl">{heading}</h2>
-      <ul class="mt-6 grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4" data-gallery>
+      <ul id={`${headingId}-lista`} class="mt-6 grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4" data-gallery>
         {photos.map((p, i) => (
-          <li>
+          <li data-extra={i >= initial ? '' : undefined} hidden={i >= initial}>
             <button
               type="button"
               data-lightbox-trigger
@@ -32,7 +35,35 @@ const { photos, headingId, heading = 'Galeria de trabalhos' } = Astro.props;
           </li>
         ))}
       </ul>
+      {extra > 0 && (
+        <div class="mt-6 text-center">
+          <button
+            type="button"
+            data-gallery-more
+            aria-expanded="false"
+            aria-controls={`${headingId}-lista`}
+            class="inline-flex min-h-12 items-center justify-center rounded-sm border-2 border-graphite px-6 py-2 text-base font-semibold text-graphite hover:bg-graphite hover:text-paper"
+          >
+            Ver mais fotos ({extra})
+          </button>
+        </div>
+      )}
       <Lightbox />
     </div>
   )
 }
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-gallery-more]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const list = document.getElementById(btn.getAttribute('aria-controls') ?? '');
+      list?.querySelectorAll<HTMLElement>('[data-extra]').forEach((li) => {
+        li.hidden = false;
+      });
+      btn.setAttribute('aria-expanded', 'true');
+      const first = list?.querySelector<HTMLElement>('[data-extra] button');
+      btn.parentElement?.remove();
+      first?.focus();
+    });
+  });
+</script>

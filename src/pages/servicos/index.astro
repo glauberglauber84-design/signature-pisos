@@ -4,6 +4,8 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
 import Section from '../../components/Section.astro';
 import ServicesGrid from '../../components/ServicesGrid.astro';
 import CtaBand from '../../components/CtaBand.astro';
+import Gallery from '../../components/Gallery.astro';
+import { allPhotos } from '../../config/photos';
 import { breadcrumbLd, collectionLd, localBusinessLd } from '../../lib/schema';
 import { absoluteUrl } from '../../config/siteConfig';
 
@@ -27,6 +29,9 @@ const crumbs = [
     <div class="mt-8">
       <ServicesGrid headingId="sec-servicos" />
     </div>
+  </Section>
+  <Section tone="sand" id="obras" labelledby="sec-obras">
+    <Gallery photos={allPhotos()} headingId="sec-obras" heading="Obras" initial={9} />
   </Section>
   <CtaBand />
 </BaseLayout>
