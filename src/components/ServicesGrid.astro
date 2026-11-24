@@ -34,7 +34,7 @@ const { citySlug, current, headingId } = Astro.props;
                 <Picture photo={photo} sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 90vw" class="h-full w-full object-cover" />
               </div>
             ) : (
-              <div class="on-dark flex aspect-[4/3] items-end justify-between bg-graphite p-4 text-gold">
+              <div class="on-dark flex aspect-[16/7] items-end sm:aspect-[4/3] justify-between bg-graphite p-4 text-gold">
                 <ServiceIcon name={s.icon} class="h-10 w-10" />
                 <span class="font-display text-3xl" aria-hidden="true">
                   {String(i + 1).padStart(2, '0')}

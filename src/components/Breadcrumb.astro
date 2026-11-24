@@ -19,7 +19,7 @@ const { items } = Astro.props;
                 <span aria-current="page" class="font-semibold text-graphite">{it.name}</span>
               ) : (
                 <>
-                  <a href={it.path} class="inline-flex min-h-11 items-center text-accent-strong underline hover:text-graphite">{it.name}</a>
+                  <a href={it.path} class="inline-flex min-h-11 min-w-11 items-center text-accent-strong underline hover:text-graphite">{it.name}</a>
                   <span class="px-2" aria-hidden="true">/</span>
                 </>
               )}

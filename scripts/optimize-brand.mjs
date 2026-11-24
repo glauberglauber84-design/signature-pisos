@@ -40,19 +40,36 @@ for (const w of [160, 240, 320, 480, 720]) {
   hSizes[w] = h;
 }
 
-// 2) favicon: monograma "S" + tabuas (recorte quadrado, fundo branco)
-// Coordenadas no original 1254x1254: S+tabuas ocupam x 180-960, y 245-695.
-const mono = await sharp(SRC).extract({ left: 150, top: 225, width: 840, height: 490 }).extend({ top: 175, bottom: 175, background: '#ffffff' }).png().toBuffer();
-const icon = async (size, file) => {
-  await sharp(mono).resize(size, size, { kernel: 'lanczos3' }).png({ compressionLevel: 9 }).toFile(file);
+// 2) favicon: recorte fechado no monograma "S" (com o começo das tábuas), fundo branco.
+// Coordenadas no original 1254x1254: S ocupa x 185-780, y 245-700.
+const CW = 660, CH = 665;
+const mono = await sharp(SRC).extract({ left: 175, top: 235, width: CW, height: 475 }).extend({ top: 95, bottom: 95, background: '#ffffff' }).png().toBuffer();
+// Em tamanhos pequenos o traço fino some: engrossa o traço escuro/dourado (dilatação por 'darken' de cópias deslocadas) antes de reduzir.
+const shift = async (buf, dx, dy) => {
+  const ext = await sharp(buf).extend({ top: Math.max(dy, 0), bottom: Math.max(-dy, 0), left: Math.max(dx, 0), right: Math.max(-dx, 0), background: '#ffffff' }).png().toBuffer();
+  return sharp(ext).extract({ left: Math.max(-dx, 0), top: Math.max(-dy, 0), width: CW, height: CH }).png().toBuffer();
 };
-await icon(32, join(PUB, 'favicon-32.png'));
+const thicken = async (r) => {
+  let cur = mono;
+  for (let a = 0; a < 12; a++) {
+    const t = (a * Math.PI) / 6;
+    const sh = await shift(mono, Math.round(r * Math.cos(t)), Math.round(r * Math.sin(t)));
+    cur = await sharp(cur).composite([{ input: sh, blend: 'darken' }]).png().toBuffer();
+  }
+  return cur;
+};
+const monoBold16 = await thicken(14);
+const monoBold32 = await thicken(10);
+const icon = async (size, file, src = mono) => {
+  await sharp(src).resize(size, size, { kernel: 'lanczos3' }).png({ compressionLevel: 9 }).toFile(file);
+};
+await icon(32, join(PUB, 'favicon-32.png'), monoBold32);
 await icon(180, join(PUB, 'apple-touch-icon.png'));
 await icon(192, join(PUB, 'icon-192.png'));
 await icon(512, join(PUB, 'icon-512.png'));
 // ICO com PNGs embutidos (16/32/48)
 const icoSizes = [16, 32, 48];
-const pngs = await Promise.all(icoSizes.map((s) => sharp(mono).resize(s, s, { kernel: 'lanczos3' }).png().toBuffer()));
+const pngs = await Promise.all(icoSizes.map((s) => sharp(s === 16 ? monoBold16 : monoBold32).resize(s, s, { kernel: 'lanczos3' }).png().toBuffer()));
 const head = Buffer.alloc(6);
 head.writeUInt16LE(0, 0); head.writeUInt16LE(1, 2); head.writeUInt16LE(icoSizes.length, 4);
 let offset = 6 + 16 * icoSizes.length;

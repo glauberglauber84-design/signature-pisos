@@ -14,7 +14,7 @@ const keyIsPlaceholder = f.accessKey === 'SUBSTITUIR_PELA_CHAVE' || !f.accessKey
 const configured =
   f.provider === 'web3forms' ? !keyIsPlaceholder : f.provider === 'formspree' ? !f.endpoint.includes('<') : false;
 
-const field = 'block w-full min-h-12 rounded-sm border-2 border-graphite bg-white px-3 py-2 text-base text-graphite aria-[invalid=true]:border-danger';
+const field = 'block w-full min-h-12 font-sans rounded-sm border-2 border-graphite bg-white px-3 py-2 text-base text-graphite aria-[invalid=true]:border-danger';
 const label = 'mb-1 block text-base font-semibold text-graphite';
 const err = 'mt-1 hidden text-base font-medium text-danger';
 ---
@@ -69,9 +69,9 @@ const err = 'mt-1 hidden text-base font-medium text-danger';
 
     <div class="md:col-span-2">
       <div class="flex items-start gap-3">
-        <input id="cf-lgpd" name="lgpd" type="checkbox" required aria-describedby="cf-lgpd-err" class="mt-1 h-6 w-6 shrink-0 accent-accent-strong" />
-        <label for="cf-lgpd" class="text-base text-graphite">
-          Concordo com o uso dos dados informados para retorno do orçamento, conforme a
+        <input id="cf-lgpd" name="lgpd" type="checkbox" required aria-describedby="cf-lgpd-err" class="mt-2.5 h-6 w-6 shrink-0 accent-accent-strong" />
+        <label for="cf-lgpd" class="block min-h-11 cursor-pointer py-2.5 text-base text-graphite">
+          Concordo com o uso dos dados informados para retorno do orçamento, conforme a{" "}
           <a href="/politica-de-privacidade/" class="font-semibold text-accent-strong underline">política de privacidade</a>.
         </label>
       </div>
@@ -87,7 +87,7 @@ const err = 'mt-1 hidden text-base font-medium text-danger';
     <div class="flex flex-col gap-3 sm:flex-row md:col-span-2">
       <button
         type="submit"
-        class="inline-flex min-h-12 items-center justify-center rounded-sm border-2 border-graphite bg-graphite px-6 py-2 text-base font-semibold text-paper hover:bg-graphite-soft disabled:opacity-60"
+        class="inline-flex min-h-12 items-center justify-center rounded-sm border-2 border-graphite bg-graphite px-6 py-2 text-base font-semibold text-paper hover:bg-graphite-soft disabled:cursor-not-allowed disabled:opacity-60"
       >
         Enviar pedido
       </button>
