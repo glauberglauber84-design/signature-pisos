@@ -1,0 +1,712 @@
+[
+  {
+    "servico": "instalacao-piso-vinilico",
+    "servicoLabel": "Instalação de Piso Vinílico",
+    "cidade": "sao-paulo",
+    "cidadeLabel": "São Paulo",
+    "estado": "SP",
+    "principal": true,
+    "bairros": [
+      "Barra Funda",
+      "Vila Leopoldina",
+      "Perdizes",
+      "Vila Mariana",
+      "Região Central",
+      "Zona Sul"
+    ]
+  },
+  {
+    "servico": "instalacao-piso-vinilico",
+    "servicoLabel": "Instalação de Piso Vinílico",
+    "cidade": "osasco",
+    "cidadeLabel": "Osasco",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Centro",
+      "Presidente Altino",
+      "Bela Vista",
+      "Vila Yara",
+      "Jardim Piratininga"
+    ]
+  },
+  {
+    "servico": "instalacao-piso-vinilico",
+    "servicoLabel": "Instalação de Piso Vinílico",
+    "cidade": "cotia",
+    "cidadeLabel": "Cotia",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Granja Viana",
+      "Jardim da Glória",
+      "Caucaia do Alto",
+      "Centro"
+    ]
+  },
+  {
+    "servico": "instalacao-piso-vinilico",
+    "servicoLabel": "Instalação de Piso Vinílico",
+    "cidade": "barueri",
+    "cidadeLabel": "Barueri",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Centro",
+      "Jardim Silveira",
+      "Vila Porto",
+      "Tamboré",
+      "Aldeia"
+    ]
+  },
+  {
+    "servico": "instalacao-piso-vinilico",
+    "servicoLabel": "Instalação de Piso Vinílico",
+    "cidade": "santana-de-parnaiba",
+    "cidadeLabel": "Santana de Parnaíba",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Centro Histórico",
+      "Cidade São Pedro/Suru",
+      "Fazendinha",
+      "Colinas da Anhanguera"
+    ]
+  },
+  {
+    "servico": "instalacao-piso-vinilico",
+    "servicoLabel": "Instalação de Piso Vinílico",
+    "cidade": "alphaville",
+    "cidadeLabel": "Alphaville",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Alphaville Residencial",
+      "Tamboré",
+      "Alphaville Industrial/Empresarial",
+      "Residencial Zero"
+    ]
+  },
+  {
+    "servico": "instalacao-piso-laminado",
+    "servicoLabel": "Instalação de Piso Laminado",
+    "cidade": "sao-paulo",
+    "cidadeLabel": "São Paulo",
+    "estado": "SP",
+    "principal": true,
+    "bairros": [
+      "Barra Funda",
+      "Vila Leopoldina",
+      "Perdizes",
+      "Vila Mariana",
+      "Região Central",
+      "Zona Sul"
+    ]
+  },
+  {
+    "servico": "instalacao-piso-laminado",
+    "servicoLabel": "Instalação de Piso Laminado",
+    "cidade": "osasco",
+    "cidadeLabel": "Osasco",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Centro",
+      "Presidente Altino",
+      "Bela Vista",
+      "Vila Yara",
+      "Jardim Piratininga"
+    ]
+  },
+  {
+    "servico": "instalacao-piso-laminado",
+    "servicoLabel": "Instalação de Piso Laminado",
+    "cidade": "cotia",
+    "cidadeLabel": "Cotia",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Granja Viana",
+      "Jardim da Glória",
+      "Caucaia do Alto",
+      "Centro"
+    ]
+  },
+  {
+    "servico": "instalacao-piso-laminado",
+    "servicoLabel": "Instalação de Piso Laminado",
+    "cidade": "barueri",
+    "cidadeLabel": "Barueri",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Centro",
+      "Jardim Silveira",
+      "Vila Porto",
+      "Tamboré",
+      "Aldeia"
+    ]
+  },
+  {
+    "servico": "instalacao-piso-laminado",
+    "servicoLabel": "Instalação de Piso Laminado",
+    "cidade": "santana-de-parnaiba",
+    "cidadeLabel": "Santana de Parnaíba",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Centro Histórico",
+      "Cidade São Pedro/Suru",
+      "Fazendinha",
+      "Colinas da Anhanguera"
+    ]
+  },
+  {
+    "servico": "instalacao-piso-laminado",
+    "servicoLabel": "Instalação de Piso Laminado",
+    "cidade": "alphaville",
+    "cidadeLabel": "Alphaville",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Alphaville Residencial",
+      "Tamboré",
+      "Alphaville Industrial/Empresarial",
+      "Residencial Zero"
+    ]
+  },
+  {
+    "servico": "raspagem-restauracao-piso-madeira",
+    "servicoLabel": "Raspagem e Restauração de Piso de Madeira",
+    "cidade": "sao-paulo",
+    "cidadeLabel": "São Paulo",
+    "estado": "SP",
+    "principal": true,
+    "bairros": [
+      "Barra Funda",
+      "Vila Leopoldina",
+      "Perdizes",
+      "Vila Mariana",
+      "Região Central",
+      "Zona Sul"
+    ]
+  },
+  {
+    "servico": "raspagem-restauracao-piso-madeira",
+    "servicoLabel": "Raspagem e Restauração de Piso de Madeira",
+    "cidade": "osasco",
+    "cidadeLabel": "Osasco",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Centro",
+      "Presidente Altino",
+      "Bela Vista",
+      "Vila Yara",
+      "Jardim Piratininga"
+    ]
+  },
+  {
+    "servico": "raspagem-restauracao-piso-madeira",
+    "servicoLabel": "Raspagem e Restauração de Piso de Madeira",
+    "cidade": "cotia",
+    "cidadeLabel": "Cotia",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Granja Viana",
+      "Jardim da Glória",
+      "Caucaia do Alto",
+      "Centro"
+    ]
+  },
+  {
+    "servico": "raspagem-restauracao-piso-madeira",
+    "servicoLabel": "Raspagem e Restauração de Piso de Madeira",
+    "cidade": "barueri",
+    "cidadeLabel": "Barueri",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Centro",
+      "Jardim Silveira",
+      "Vila Porto",
+      "Tamboré",
+      "Aldeia"
+    ]
+  },
+  {
+    "servico": "raspagem-restauracao-piso-madeira",
+    "servicoLabel": "Raspagem e Restauração de Piso de Madeira",
+    "cidade": "santana-de-parnaiba",
+    "cidadeLabel": "Santana de Parnaíba",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Centro Histórico",
+      "Cidade São Pedro/Suru",
+      "Fazendinha",
+      "Colinas da Anhanguera"
+    ]
+  },
+  {
+    "servico": "raspagem-restauracao-piso-madeira",
+    "servicoLabel": "Raspagem e Restauração de Piso de Madeira",
+    "cidade": "alphaville",
+    "cidadeLabel": "Alphaville",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Alphaville Residencial",
+      "Tamboré",
+      "Alphaville Industrial/Empresarial",
+      "Residencial Zero"
+    ]
+  },
+  {
+    "servico": "porcelanato-liquido",
+    "servicoLabel": "Porcelanato Líquido",
+    "cidade": "sao-paulo",
+    "cidadeLabel": "São Paulo",
+    "estado": "SP",
+    "principal": true,
+    "bairros": [
+      "Barra Funda",
+      "Vila Leopoldina",
+      "Perdizes",
+      "Vila Mariana",
+      "Região Central",
+      "Zona Sul"
+    ],
+    "servicoPrincipal": true
+  },
+  {
+    "servico": "porcelanato-liquido",
+    "servicoLabel": "Porcelanato Líquido",
+    "cidade": "osasco",
+    "cidadeLabel": "Osasco",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Centro",
+      "Presidente Altino",
+      "Bela Vista",
+      "Vila Yara",
+      "Jardim Piratininga"
+    ],
+    "servicoPrincipal": true
+  },
+  {
+    "servico": "porcelanato-liquido",
+    "servicoLabel": "Porcelanato Líquido",
+    "cidade": "cotia",
+    "cidadeLabel": "Cotia",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Granja Viana",
+      "Jardim da Glória",
+      "Caucaia do Alto",
+      "Centro"
+    ],
+    "servicoPrincipal": true
+  },
+  {
+    "servico": "porcelanato-liquido",
+    "servicoLabel": "Porcelanato Líquido",
+    "cidade": "barueri",
+    "cidadeLabel": "Barueri",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Centro",
+      "Jardim Silveira",
+      "Vila Porto",
+      "Tamboré",
+      "Aldeia"
+    ],
+    "servicoPrincipal": true
+  },
+  {
+    "servico": "porcelanato-liquido",
+    "servicoLabel": "Porcelanato Líquido",
+    "cidade": "santana-de-parnaiba",
+    "cidadeLabel": "Santana de Parnaíba",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Centro Histórico",
+      "Cidade São Pedro/Suru",
+      "Fazendinha",
+      "Colinas da Anhanguera"
+    ],
+    "servicoPrincipal": true
+  },
+  {
+    "servico": "porcelanato-liquido",
+    "servicoLabel": "Porcelanato Líquido",
+    "cidade": "alphaville",
+    "cidadeLabel": "Alphaville",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Alphaville Residencial",
+      "Tamboré",
+      "Alphaville Industrial/Empresarial",
+      "Residencial Zero"
+    ],
+    "servicoPrincipal": true
+  },
+  {
+    "servico": "cimento-queimado",
+    "servicoLabel": "Cimento Queimado",
+    "cidade": "sao-paulo",
+    "cidadeLabel": "São Paulo",
+    "estado": "SP",
+    "principal": true,
+    "bairros": [
+      "Barra Funda",
+      "Vila Leopoldina",
+      "Perdizes",
+      "Vila Mariana",
+      "Região Central",
+      "Zona Sul"
+    ]
+  },
+  {
+    "servico": "cimento-queimado",
+    "servicoLabel": "Cimento Queimado",
+    "cidade": "osasco",
+    "cidadeLabel": "Osasco",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Centro",
+      "Presidente Altino",
+      "Bela Vista",
+      "Vila Yara",
+      "Jardim Piratininga"
+    ]
+  },
+  {
+    "servico": "cimento-queimado",
+    "servicoLabel": "Cimento Queimado",
+    "cidade": "cotia",
+    "cidadeLabel": "Cotia",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Granja Viana",
+      "Jardim da Glória",
+      "Caucaia do Alto",
+      "Centro"
+    ]
+  },
+  {
+    "servico": "cimento-queimado",
+    "servicoLabel": "Cimento Queimado",
+    "cidade": "barueri",
+    "cidadeLabel": "Barueri",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Centro",
+      "Jardim Silveira",
+      "Vila Porto",
+      "Tamboré",
+      "Aldeia"
+    ]
+  },
+  {
+    "servico": "cimento-queimado",
+    "servicoLabel": "Cimento Queimado",
+    "cidade": "santana-de-parnaiba",
+    "cidadeLabel": "Santana de Parnaíba",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Centro Histórico",
+      "Cidade São Pedro/Suru",
+      "Fazendinha",
+      "Colinas da Anhanguera"
+    ]
+  },
+  {
+    "servico": "cimento-queimado",
+    "servicoLabel": "Cimento Queimado",
+    "cidade": "alphaville",
+    "cidadeLabel": "Alphaville",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Alphaville Residencial",
+      "Tamboré",
+      "Alphaville Industrial/Empresarial",
+      "Residencial Zero"
+    ]
+  },
+  {
+    "servico": "granito-liquido",
+    "servicoLabel": "Granito Líquido",
+    "cidade": "sao-paulo",
+    "cidadeLabel": "São Paulo",
+    "estado": "SP",
+    "principal": true,
+    "bairros": [
+      "Barra Funda",
+      "Vila Leopoldina",
+      "Perdizes",
+      "Vila Mariana",
+      "Região Central",
+      "Zona Sul"
+    ]
+  },
+  {
+    "servico": "granito-liquido",
+    "servicoLabel": "Granito Líquido",
+    "cidade": "osasco",
+    "cidadeLabel": "Osasco",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Centro",
+      "Presidente Altino",
+      "Bela Vista",
+      "Vila Yara",
+      "Jardim Piratininga"
+    ]
+  },
+  {
+    "servico": "granito-liquido",
+    "servicoLabel": "Granito Líquido",
+    "cidade": "cotia",
+    "cidadeLabel": "Cotia",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Granja Viana",
+      "Jardim da Glória",
+      "Caucaia do Alto",
+      "Centro"
+    ]
+  },
+  {
+    "servico": "granito-liquido",
+    "servicoLabel": "Granito Líquido",
+    "cidade": "barueri",
+    "cidadeLabel": "Barueri",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Centro",
+      "Jardim Silveira",
+      "Vila Porto",
+      "Tamboré",
+      "Aldeia"
+    ]
+  },
+  {
+    "servico": "granito-liquido",
+    "servicoLabel": "Granito Líquido",
+    "cidade": "santana-de-parnaiba",
+    "cidadeLabel": "Santana de Parnaíba",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Centro Histórico",
+      "Cidade São Pedro/Suru",
+      "Fazendinha",
+      "Colinas da Anhanguera"
+    ]
+  },
+  {
+    "servico": "granito-liquido",
+    "servicoLabel": "Granito Líquido",
+    "cidade": "alphaville",
+    "cidadeLabel": "Alphaville",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Alphaville Residencial",
+      "Tamboré",
+      "Alphaville Industrial/Empresarial",
+      "Residencial Zero"
+    ]
+  },
+  {
+    "servico": "efeito-marmore-parede",
+    "servicoLabel": "Efeito Mármore em Parede",
+    "cidade": "sao-paulo",
+    "cidadeLabel": "São Paulo",
+    "estado": "SP",
+    "principal": true,
+    "bairros": [
+      "Barra Funda",
+      "Vila Leopoldina",
+      "Perdizes",
+      "Vila Mariana",
+      "Região Central",
+      "Zona Sul"
+    ]
+  },
+  {
+    "servico": "efeito-marmore-parede",
+    "servicoLabel": "Efeito Mármore em Parede",
+    "cidade": "osasco",
+    "cidadeLabel": "Osasco",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Centro",
+      "Presidente Altino",
+      "Bela Vista",
+      "Vila Yara",
+      "Jardim Piratininga"
+    ]
+  },
+  {
+    "servico": "efeito-marmore-parede",
+    "servicoLabel": "Efeito Mármore em Parede",
+    "cidade": "cotia",
+    "cidadeLabel": "Cotia",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Granja Viana",
+      "Jardim da Glória",
+      "Caucaia do Alto",
+      "Centro"
+    ]
+  },
+  {
+    "servico": "efeito-marmore-parede",
+    "servicoLabel": "Efeito Mármore em Parede",
+    "cidade": "barueri",
+    "cidadeLabel": "Barueri",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Centro",
+      "Jardim Silveira",
+      "Vila Porto",
+      "Tamboré",
+      "Aldeia"
+    ]
+  },
+  {
+    "servico": "efeito-marmore-parede",
+    "servicoLabel": "Efeito Mármore em Parede",
+    "cidade": "santana-de-parnaiba",
+    "cidadeLabel": "Santana de Parnaíba",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Centro Histórico",
+      "Cidade São Pedro/Suru",
+      "Fazendinha",
+      "Colinas da Anhanguera"
+    ]
+  },
+  {
+    "servico": "efeito-marmore-parede",
+    "servicoLabel": "Efeito Mármore em Parede",
+    "cidade": "alphaville",
+    "cidadeLabel": "Alphaville",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Alphaville Residencial",
+      "Tamboré",
+      "Alphaville Industrial/Empresarial",
+      "Residencial Zero"
+    ]
+  },
+  {
+    "servico": "azulejista",
+    "servicoLabel": "Azulejista",
+    "cidade": "sao-paulo",
+    "cidadeLabel": "São Paulo",
+    "estado": "SP",
+    "principal": true,
+    "bairros": [
+      "Barra Funda",
+      "Vila Leopoldina",
+      "Perdizes",
+      "Vila Mariana",
+      "Região Central",
+      "Zona Sul"
+    ]
+  },
+  {
+    "servico": "azulejista",
+    "servicoLabel": "Azulejista",
+    "cidade": "osasco",
+    "cidadeLabel": "Osasco",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Centro",
+      "Presidente Altino",
+      "Bela Vista",
+      "Vila Yara",
+      "Jardim Piratininga"
+    ]
+  },
+  {
+    "servico": "azulejista",
+    "servicoLabel": "Azulejista",
+    "cidade": "cotia",
+    "cidadeLabel": "Cotia",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Granja Viana",
+      "Jardim da Glória",
+      "Caucaia do Alto",
+      "Centro"
+    ]
+  },
+  {
+    "servico": "azulejista",
+    "servicoLabel": "Azulejista",
+    "cidade": "barueri",
+    "cidadeLabel": "Barueri",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Centro",
+      "Jardim Silveira",
+      "Vila Porto",
+      "Tamboré",
+      "Aldeia"
+    ]
+  },
+  {
+    "servico": "azulejista",
+    "servicoLabel": "Azulejista",
+    "cidade": "santana-de-parnaiba",
+    "cidadeLabel": "Santana de Parnaíba",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Centro Histórico",
+      "Cidade São Pedro/Suru",
+      "Fazendinha",
+      "Colinas da Anhanguera"
+    ]
+  },
+  {
+    "servico": "azulejista",
+    "servicoLabel": "Azulejista",
+    "cidade": "alphaville",
+    "cidadeLabel": "Alphaville",
+    "estado": "SP",
+    "principal": false,
+    "bairros": [
+      "Alphaville Residencial",
+      "Tamboré",
+      "Alphaville Industrial/Empresarial",
+      "Residencial Zero"
+    ]
+  }
+]
