@@ -1,0 +1,18 @@
+---
+import Button from './Button.astro';
+import WhatsAppIcon from './WhatsAppIcon.astro';
+import { siteConfig, whatsappLink } from '../config/siteConfig';
+
+interface Props {
+  message?: string;
+  variant?: 'primary' | 'secondary' | 'secondary-dark' | 'dark';
+  text?: string;
+  class?: string;
+}
+const { message, variant = 'primary', text = siteConfig.whatsapp.cta, class: className = '' } = Astro.props;
+---
+
+<Button href={whatsappLink(message)} variant={variant} external waCta class={className}>
+  <WhatsAppIcon />
+  <span>{text}</span>
+</Button>

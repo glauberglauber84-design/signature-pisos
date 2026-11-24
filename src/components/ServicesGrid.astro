@@ -1,0 +1,56 @@
+---
+import Picture from './Picture.astro';
+import ServiceIcon from './ServiceIcon.astro';
+import { siteConfig } from '../config/siteConfig';
+import { cardPhotoFor } from '../config/photos';
+
+interface Props {
+  /** Se informado, cada card leva para a página serviço × cidade. Senão, para o hub do serviço. */
+  citySlug?: string;
+  current?: string;
+  headingId: string;
+}
+const { citySlug, current, headingId } = Astro.props;
+---
+
+<ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-labelledby={headingId}>
+  {
+    siteConfig.services.map((s, i) => {
+      const photo = s.hasPhotos ? cardPhotoFor(s.slug) : undefined;
+      const href = citySlug ? `/${s.slug}-${citySlug}/` : `/servicos/${s.slug}/`;
+      const isCurrent = current === s.slug;
+      return (
+        <li class="flex">
+          <a
+            href={href}
+            aria-current={isCurrent ? 'page' : undefined}
+            class:list={[
+              'group flex w-full flex-col overflow-hidden rounded-sm border-2 no-underline transition-colors',
+              isCurrent ? 'border-accent-strong bg-sand' : 'border-line bg-paper hover:border-graphite',
+            ]}
+          >
+            {photo ? (
+              <div class="aspect-[4/3] overflow-hidden bg-sand">
+                <Picture photo={photo} sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 90vw" class="h-full w-full object-cover" />
+              </div>
+            ) : (
+              <div class="on-dark flex aspect-[4/3] items-end justify-between bg-graphite p-4 text-gold">
+                <ServiceIcon name={s.icon} class="h-10 w-10" />
+                <span class="font-display text-3xl" aria-hidden="true">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+              </div>
+            )}
+            <div class="flex flex-1 flex-col p-4">
+              <h3 class="text-lg text-graphite">{s.label}</h3>
+              <p class="mt-2 text-base text-ink-soft">{s.short}</p>
+              <span class="mt-auto pt-4 text-base font-semibold text-accent-strong group-hover:underline">
+                {citySlug ? 'Ver nesta cidade' : 'Saiba mais'}
+              </span>
+            </div>
+          </a>
+        </li>
+      );
+    })
+  }
+</ul>

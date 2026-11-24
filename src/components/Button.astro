@@ -1,0 +1,33 @@
+---
+interface Props {
+  href: string;
+  variant?: 'primary' | 'secondary' | 'secondary-dark' | 'dark';
+  external?: boolean;
+  class?: string;
+  label?: string;
+  /** Marca CTA de WhatsApp para o botão flutuante se esconder quando este estiver visível. */
+  waCta?: boolean;
+}
+const { href, variant = 'primary', external = false, class: className = '', label, waCta = false } = Astro.props;
+const variants = {
+  primary: 'bg-gold text-graphite hover:bg-paper hover:text-graphite border-gold',
+  secondary: 'bg-transparent text-graphite border-graphite hover:bg-graphite hover:text-paper',
+  'secondary-dark': 'bg-transparent text-paper border-paper hover:bg-paper hover:text-graphite',
+  dark: 'bg-graphite text-paper border-graphite hover:bg-graphite-soft',
+};
+---
+
+<a
+  href={href}
+  aria-label={label}
+  data-wa-cta={waCta ? '' : undefined}
+  target={external ? '_blank' : undefined}
+  rel={external ? 'noopener noreferrer' : undefined}
+  class:list={[
+    'inline-flex min-h-12 items-center justify-center gap-2 rounded-sm border-2 px-6 py-2 text-base font-semibold no-underline transition-colors',
+    variants[variant],
+    className,
+  ]}
+>
+  <slot />
+</a>

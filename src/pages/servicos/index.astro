@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import Section from '../../components/Section.astro';
+import ServicesGrid from '../../components/ServicesGrid.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { breadcrumbLd, collectionLd, localBusinessLd } from '../../lib/schema';
+import { absoluteUrl } from '../../config/siteConfig';
+
+const title = 'Serviços de pisos e revestimentos | Signature Pisos';
+const description =
+  'Veja os 8 serviços da Signature Pisos: piso vinílico e laminado, restauração de madeira, porcelanato líquido, cimento queimado e mais.';
+const crumbs = [
+  { name: 'Início', path: '/' },
+  { name: 'Serviços', path: '/servicos/' },
+];
+---
+
+<BaseLayout title={title} description={description} path="/servicos/" ld={[localBusinessLd(), breadcrumbLd(crumbs), collectionLd('Serviços', absoluteUrl('/servicos/'), description)]}>
+  <Breadcrumb items={crumbs} />
+  <Section labelledby="sec-servicos">
+    <h1 id="sec-servicos" class="text-3xl md:text-4xl">Serviços de pisos e revestimentos</h1>
+    <p class="mt-4 max-w-prose text-lg text-ink-soft">
+      Oito serviços para pisos e paredes. Escolha um para ver as cidades atendidas, fotos e como o trabalho é feito.
+    </p>
+    <h2 class="visually-hidden">Lista de serviços</h2>
+    <div class="mt-8">
+      <ServicesGrid headingId="sec-servicos" />
+    </div>
+  </Section>
+  <CtaBand />
+</BaseLayout>

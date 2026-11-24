@@ -1,0 +1,29 @@
+---
+import { siteConfig } from '../config/siteConfig';
+
+interface Props {
+  cidade: string;
+  exclude?: string;
+  label?: string;
+}
+const { cidade, exclude, label = 'Outros serviços na mesma cidade' } = Astro.props;
+const city = siteConfig.cities.find((c) => c.slug === cidade);
+const services = siteConfig.services.filter((s) => s.slug !== exclude);
+---
+
+<nav aria-label={label}>
+  <ul class="flex flex-wrap gap-2">
+    {
+      services.map((s) => (
+        <li>
+          <a
+            href={`/${s.slug}-${cidade}/`}
+            class="inline-flex min-h-11 items-center rounded-sm border-2 border-line px-4 text-base font-medium text-graphite no-underline hover:border-graphite"
+          >
+            {s.label} em {city?.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

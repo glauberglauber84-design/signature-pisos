@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+import AboutBlock from '../components/AboutBlock.astro';
+import ServiceAreaBlock from '../components/ServiceAreaBlock.astro';
+import Gallery from '../components/Gallery.astro';
+import BeforeAfter from '../components/BeforeAfter.astro';
+import HowWeWork from '../components/HowWeWork.astro';
+import Faq from '../components/Faq.astro';
+import ContactForm from '../components/ContactForm.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { allLocs, getPageData, pageSlug, validateContent } from '../lib/pages';
+import type { Loc } from '../lib/pages';
+import { siteConfig, getService, absoluteUrl } from '../config/siteConfig';
+import { beforeAfterFor, coverFor, galleryFor } from '../config/photos';
+import { breadcrumbLd, faqLd, localBusinessLd, serviceLd } from '../lib/schema';
+
+export function getStaticPaths() {
+  validateContent();
+  return allLocs.map((loc) => ({ params: { slug: pageSlug(loc) }, props: { loc } }));
+}
+
+interface Props {
+  loc: Loc;
+}
+const { loc } = Astro.props;
+const { data: content, missing } = getPageData(loc.servico, loc.cidade);
+const service = getService(loc.servico);
+const serviceIndex = siteConfig.services.findIndex((s) => s.slug === loc.servico);
+const path = `/${pageSlug(loc)}/`;
+const crumbs = [
+  { name: 'Início', path: '/' },
+  { name: 'Serviços', path: '/servicos/' },
+  { name: service.label, path: `/servicos/${service.slug}/` },
+  { name: loc.cidadeLabel, path },
+];
+const gallery = service.hasPhotos ? galleryFor(loc.servico) : [];
+const beforeAfter = service.hasPhotos ? beforeAfterFor(loc.servico) : [];
+const message = `Olá! Vim pelo site da Signature Pisos e gostaria de um orçamento de ${service.label} em ${loc.cidadeLabel}.`;
+const ld = [
+  localBusinessLd(),
+  serviceLd({
+    name: `${service.label} em ${loc.cidadeLabel}`,
+    serviceType: service.label,
+    cityLabel: loc.cidadeLabel,
+    url: absoluteUrl(path),
+    description: content.description,
+  }),
+  breadcrumbLd(crumbs),
+  ...(content.faq.length > 0 ? [faqLd(content.faq)] : []),
+];
+---
+
+<BaseLayout title={content.title} description={content.description} path={path} noindex={missing} ld={ld}>
+  <Breadcrumb items={crumbs} />
+  <Hero
+    h1={content.h1}
+    subtitle={content.hero_subtitle}
+    photo={coverFor(loc.servico)}
+    tonal={{ service, index: serviceIndex }}
+    secondaryHref="#contato"
+    secondaryLabel="Ir para o formulário"
+    whatsappMessage={message}
+  />
+
+  <Section tone="sand" labelledby="sec-servicos">
+    <h2 id="sec-servicos" class="mb-8 text-2xl md:text-3xl">Serviços em {loc.cidadeLabel}</h2>
+    <ServicesGrid citySlug={loc.cidade} current={loc.servico} headingId="sec-servicos" />
+  </Section>
+
+  <Section labelledby="sec-sobre">
+    <AboutBlock text={content.sobre_texto} headingId="sec-sobre" />
+  </Section>
+
+  <Section tone="sand" labelledby="sec-area">
+    <ServiceAreaBlock headingId="sec-area" cityLabel={loc.cidadeLabel} bairros={loc.bairros} servico={loc.servico} cidade={loc.cidade} message={message} />
+    <p class="mt-8 text-base text-graphite">
+      Veja também:
+      <a href={`/servicos/${service.slug}/`} class="font-semibold text-accent-strong underline">todas as cidades com {service.label}</a>
+      e
+      <a href={`/atendimento/${loc.cidade}/`} class="font-semibold text-accent-strong underline">todos os serviços em {loc.cidadeLabel}</a>.
+    </p>
+  </Section>
+
+  <Section labelledby={service.hasPhotos ? 'sec-galeria' : 'sec-etapas'}>
+    <div class="grid gap-12">
+      {service.hasPhotos ? (
+        <>
+          <Gallery photos={gallery} headingId="sec-galeria" />
+          <BeforeAfter photos={beforeAfter} headingId="sec-antes-depois" />
+        </>
+      ) : (
+        <HowWeWork service={service} headingId="sec-etapas" />
+      )}
+      <Faq items={content.faq} headingId="sec-faq" />
+    </div>
+  </Section>
+
+  <CtaBand message={message} />
+
+  <Section tone="sand" id="contato" labelledby="sec-contato">
+    <ContactForm headingId="sec-contato" defaultService={loc.servico} defaultCity={loc.cidade} />
+  </Section>
+</BaseLayout>

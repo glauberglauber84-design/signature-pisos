@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import Section from '../../components/Section.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { breadcrumbLd, collectionLd, localBusinessLd } from '../../lib/schema';
+import { absoluteUrl, siteConfig } from '../../config/siteConfig';
+
+const title = 'Área de atendimento em SP e Grande SP | Signature Pisos';
+const description =
+  'Atendemos São Paulo, Osasco, Cotia, Barueri, Santana de Parnaíba e Alphaville. Escolha sua cidade e veja os serviços disponíveis.';
+const crumbs = [
+  { name: 'Início', path: '/' },
+  { name: 'Atendimento', path: '/atendimento/' },
+];
+---
+
+<BaseLayout title={title} description={description} path="/atendimento/" ld={[localBusinessLd(), breadcrumbLd(crumbs), collectionLd('Atendimento', absoluteUrl('/atendimento/'), description)]}>
+  <Breadcrumb items={crumbs} />
+  <Section labelledby="sec-atendimento">
+    <h1 id="sec-atendimento" class="text-3xl md:text-4xl">Área de atendimento</h1>
+    <p class="mt-4 max-w-prose text-lg text-ink-soft">
+      Atendemos {siteConfig.areaAtendimento.resumo}. Escolha a cidade para ver os bairros e os serviços.
+    </p>
+    <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        siteConfig.cities.map((c) => (
+          <li>
+            <a href={`/atendimento/${c.slug}/`} class="block h-full rounded-sm border-2 border-line bg-paper p-6 no-underline hover:border-graphite">
+              <h2 class="text-xl text-graphite">{c.label}</h2>
+              <p class="mt-2 text-base text-ink-soft">{c.bairros.slice(0, 4).join(', ')} e região.</p>
+              <span class="mt-4 inline-block text-base font-semibold text-accent-strong">Ver serviços</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </Section>
+  <CtaBand />
+</BaseLayout>

@@ -1,0 +1,32 @@
+---
+import { siteConfig } from '../config/siteConfig';
+
+interface Props {
+  variant?: 'horizontal' | 'square';
+  /** Largura de exibição em px (define width/height do <img>). */
+  width?: number;
+  class?: string;
+  eager?: boolean;
+}
+const { variant = 'horizontal', width, class: className = '', eager = false } = Astro.props;
+const cfg = siteConfig.logo[variant];
+const w = width ?? cfg.width;
+const h = Math.round((w * cfg.height) / cfg.width);
+const set = (ext: 'webp' | 'png'): string => cfg.widths.map((x) => `${cfg.base}${x}.${ext} ${x}w`).join(', ');
+const pick = cfg.widths.find((x) => x >= w * 2) ?? cfg.widths[cfg.widths.length - 1];
+---
+
+<picture>
+  <source type="image/webp" srcset={set('webp')} sizes={`${w}px`} />
+  <img
+    src={`${cfg.base}${pick}.png`}
+    srcset={set('png')}
+    sizes={`${w}px`}
+    width={w}
+    height={h}
+    alt={siteConfig.logo.alt}
+    loading={eager ? 'eager' : 'lazy'}
+    decoding="async"
+    class={className}
+  />
+</picture>

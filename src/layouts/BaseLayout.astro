@@ -1,0 +1,47 @@
+---
+import '../styles/global.css';
+import Seo from '../components/Seo.astro';
+import JsonLd from '../components/JsonLd.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  image?: string;
+  imageAlt?: string;
+  noindex?: boolean;
+  ld?: Array<Record<string, unknown>>;
+  preloadImage?: string;
+}
+
+const { title, description, path, image, imageAlt, noindex, ld = [], preloadImage } = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" href="/fonts/manrope-latin-wght.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/fraunces-latin-wght.woff2" as="font" type="font/woff2" crossorigin />
+    {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
+    <Seo title={title} description={description} path={path} image={image} imageAlt={imageAlt} noindex={noindex} />
+    {ld.map((d) => <JsonLd data={d} />)}
+  </head>
+  <body class="min-h-screen antialiased">
+    <a
+      href="#conteudo"
+      class="visually-hidden focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-graphite focus:px-4 focus:py-3 focus:text-paper"
+      >Pular para o conteúdo</a
+    >
+    <Header current={path} />
+    <main id="conteudo" tabindex="-1">
+      <slot />
+    </main>
+    <Footer />
+    <WhatsAppFloat />
+  </body>
+</html>

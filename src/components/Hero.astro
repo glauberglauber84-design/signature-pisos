@@ -1,0 +1,61 @@
+---
+import Container from './Container.astro';
+import Picture from './Picture.astro';
+import ServiceIcon from './ServiceIcon.astro';
+import WhatsAppButton from './WhatsAppButton.astro';
+import Button from './Button.astro';
+import type { Photo } from '../config/photos';
+import type { Service } from '../config/siteConfig';
+
+interface Props {
+  h1: string;
+  subtitle: string;
+  eyebrow?: string;
+  photo?: Photo;
+  /** Para serviços sem foto: bloco tonal com ícone e numeral. */
+  tonal?: { service: Service; index: number };
+  secondaryHref?: string;
+  secondaryLabel?: string;
+  whatsappMessage?: string;
+}
+
+const { h1, subtitle, eyebrow, photo, tonal, secondaryHref = '/servicos/', secondaryLabel = 'Ver serviços', whatsappMessage } = Astro.props;
+---
+
+<section class="bg-paper" aria-labelledby="hero-titulo">
+  <Container class="grid items-center gap-8 py-8 md:grid-cols-2 md:gap-16 md:py-16">
+    <div class="order-1">
+      {eyebrow && <p class="mb-3 text-base font-semibold uppercase tracking-widest text-accent-strong">{eyebrow}</p>}
+      <h1 id="hero-titulo" class="text-3xl text-graphite md:text-4xl lg:text-5xl">{h1}</h1>
+      <p class="mt-4 max-w-xl text-lg text-ink-soft">{subtitle}</p>
+      <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+        <WhatsAppButton message={whatsappMessage} />
+        <Button href={secondaryHref} variant="secondary">{secondaryLabel}</Button>
+      </div>
+    </div>
+
+    <div class="order-2">
+      {
+        photo && (
+          <div class="mx-auto aspect-[4/5] max-h-[26rem] overflow-hidden rounded-sm bg-sand shadow-card md:max-h-none">
+            <Picture photo={photo} eager sizes="(min-width: 768px) 440px, 90vw" class="h-full w-full object-cover" />
+          </div>
+        )
+      }
+      {
+        !photo && tonal && (
+          <div class="relative flex aspect-[4/3] flex-col justify-between overflow-hidden rounded-sm bg-graphite p-6 text-paper shadow-card md:aspect-[4/5] md:p-8 on-dark">
+            <span class="font-display text-5xl text-gold" aria-hidden="true">
+              {String(tonal.index + 1).padStart(2, '0')}
+            </span>
+            <div>
+              <ServiceIcon name={tonal.service.icon} class="h-12 w-12 text-gold" />
+              <div class="my-4 h-0.5 w-16 bg-gold" aria-hidden="true" />
+              <p class="font-display text-xl text-paper">{tonal.service.label}</p>
+            </div>
+          </div>
+        )
+      }
+    </div>
+  </Container>
+</section>

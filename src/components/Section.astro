@@ -1,0 +1,20 @@
+---
+import Container from './Container.astro';
+
+interface Props {
+  tone?: 'paper' | 'sand' | 'dark';
+  id?: string;
+  labelledby?: string;
+  class?: string;
+}
+const { tone = 'paper', id, labelledby, class: className = '' } = Astro.props;
+const tones = {
+  paper: 'bg-paper text-graphite',
+  sand: 'bg-sand text-graphite',
+  dark: 'bg-graphite text-paper on-dark',
+};
+---
+
+<section id={id} aria-labelledby={labelledby} class:list={[tones[tone], 'py-12 md:py-24', className]}>
+  <Container><slot /></Container>
+</section>

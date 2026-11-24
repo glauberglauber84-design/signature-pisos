@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Section from '../components/Section.astro';
+import ContactForm from '../components/ContactForm.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import { siteConfig } from '../config/siteConfig';
+import { breadcrumbLd, localBusinessLd } from '../lib/schema';
+
+const title = 'Contato e orçamento | Signature Pisos';
+const description = 'Peça seu orçamento de pisos e revestimentos em São Paulo e Grande SP pelo formulário ou direto no WhatsApp da Signature Pisos.';
+const crumbs = [
+  { name: 'Início', path: '/' },
+  { name: 'Contato', path: '/contato/' },
+];
+---
+
+<BaseLayout title={title} description={description} path="/contato/" ld={[localBusinessLd(), breadcrumbLd(crumbs)]}>
+  <Breadcrumb items={crumbs} />
+  <Section labelledby="sec-contato">
+    <h1 class="text-3xl md:text-4xl">Contato e orçamento</h1>
+    <p class="mt-4 max-w-prose text-lg text-ink-soft">
+      O jeito mais rápido é o WhatsApp. Se preferir, preencha o formulário abaixo. Atendemos {siteConfig.areaAtendimento.resumo}.
+    </p>
+    <WhatsAppButton class="mt-6" />
+    <div class="mt-12">
+      <ContactForm headingId="sec-contato" heading="Ou envie um pedido" />
+    </div>
+  </Section>
+</BaseLayout>

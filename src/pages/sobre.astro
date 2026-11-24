@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Section from '../components/Section.astro';
+import Logo from '../components/Logo.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { siteConfig } from '../config/siteConfig';
+import { breadcrumbLd, localBusinessLd } from '../lib/schema';
+
+const title = 'Sobre a Signature Pisos | Pisos e revestimentos em SP';
+const description = 'Conheça a Signature Pisos: pisos e revestimentos em São Paulo e Grande SP, com a obra executada por quem assina o resultado.';
+const crumbs = [
+  { name: 'Início', path: '/' },
+  { name: 'Sobre', path: '/sobre/' },
+];
+const r = siteConfig.responsavel;
+---
+
+<BaseLayout title={title} description={description} path="/sobre/" ld={[localBusinessLd(), breadcrumbLd(crumbs)]}>
+  <Breadcrumb items={crumbs} />
+  <Section labelledby="sec-sobre">
+    <div class="grid items-start gap-12 md:grid-cols-3">
+      <div class="md:col-span-2">
+        <h1 id="sec-sobre" class="text-3xl md:text-4xl">Sobre a {siteConfig.name}</h1>
+        <div class="prose-block mt-6 max-w-prose text-base text-graphite">
+          <p>
+            A {siteConfig.name} executa serviços de pisos e revestimentos em {siteConfig.areaAtendimento.resumo}: instalação de piso vinílico e
+            laminado, restauração de piso de madeira, porcelanato líquido, cimento queimado, granito líquido, efeito mármore em parede e trabalho de
+            azulejista.
+          </p>
+          <p>
+            Cada obra leva a nossa assinatura: quem executa a obra é quem garante a qualidade do resultado. Por isso o orçamento começa por uma
+            conversa sobre o seu ambiente, e as fotos deste site são de trabalhos reais.
+          </p>
+        </div>
+        <h2 class="mt-12 text-2xl">Responsável técnico</h2>
+        <div class="mt-4 max-w-prose rounded-sm border-2 border-line bg-paper p-6">
+          <p class="text-sm font-semibold uppercase tracking-widest text-accent-strong">{r.cargo}</p>
+          <p class="mt-2 font-display text-xl text-graphite">{r.nome}</p>
+          <p class="mt-2 text-base text-ink-soft">{r.bio}</p>
+        </div>
+      </div>
+      <div class="rounded-sm border-2 border-line bg-white p-6">
+        <Logo variant="square" width={192} class="mx-auto h-auto w-full max-w-[12rem]" />
+      </div>
+    </div>
+  </Section>
+  <CtaBand />
+</BaseLayout>

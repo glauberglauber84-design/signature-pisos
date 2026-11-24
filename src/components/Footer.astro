@@ -1,0 +1,67 @@
+---
+import Container from './Container.astro';
+import Logo from './Logo.astro';
+import WhatsAppButton from './WhatsAppButton.astro';
+import { siteConfig } from '../config/siteConfig';
+
+const linkClass = 'inline-flex min-h-11 items-center text-paper underline-offset-4 hover:text-gold hover:underline';
+---
+
+<footer class="on-dark bg-graphite pb-24 pt-12 text-paper md:pb-12">
+  <Container>
+    <div class="grid gap-12 md:grid-cols-3">
+      <div>
+        <a href="/" class="inline-block rounded-sm bg-white p-3" aria-label={`${siteConfig.name}: página inicial`}>
+          <Logo width={200} class="h-auto w-[200px]" />
+        </a>
+        <p class="mt-4 font-display text-lg text-gold">{siteConfig.slogan}</p>
+        <p class="mt-4 text-base text-paper">
+          <strong class="font-semibold">Área de atendimento:</strong> {siteConfig.areaAtendimento.resumo}.
+        </p>
+        <WhatsAppButton class="mt-6" />
+      </div>
+
+      <nav aria-label="Serviços">
+        <h2 class="font-display text-lg text-paper">Serviços</h2>
+        <ul class="mt-2">
+          {
+            siteConfig.services.map((s) => (
+              <li>
+                <a href={`/servicos/${s.slug}/`} class={linkClass}>
+                  {s.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+
+      <div>
+        <nav aria-label="Atendimento">
+          <h2 class="font-display text-lg text-paper">Atendimento</h2>
+          <ul class="mt-2">
+            {
+              siteConfig.cities.map((c) => (
+                <li>
+                  <a href={`/atendimento/${c.slug}/`} class={linkClass}>
+                    {c.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+        <nav aria-label="Institucional" class="mt-6">
+          <ul>
+            <li><a href="/sobre/" class={linkClass}>Sobre</a></li>
+            <li><a href="/contato/" class={linkClass}>Contato</a></li>
+            <li><a href="/politica-de-privacidade/" class={linkClass}>Política de privacidade</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <p class="mt-12 border-t border-graphite-soft pt-6 text-sm text-paper">
+      © {new Date().getFullYear()} {siteConfig.name}. Todos os direitos reservados.
+    </p>
+  </Container>
+</footer>

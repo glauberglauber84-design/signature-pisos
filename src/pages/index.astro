@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+import AboutBlock from '../components/AboutBlock.astro';
+import ServiceAreaBlock from '../components/ServiceAreaBlock.astro';
+import Gallery from '../components/Gallery.astro';
+import ContactForm from '../components/ContactForm.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { getHome, validateContent } from '../lib/pages';
+import { siteConfig } from '../config/siteConfig';
+import { getPhoto, heroPhoto } from '../config/photos';
+import { localBusinessLd, websiteLd } from '../lib/schema';
+
+validateContent();
+const { data: home, missing } = getHome();
+const sp = siteConfig.cities[0];
+const showcase = ['foto-29', 'foto-09', 'foto-31', 'foto-24', 'foto-14', 'foto-02'].map(getPhoto);
+---
+
+<BaseLayout
+  title={home.title}
+  description={home.description}
+  path="/"
+  noindex={missing}
+  ld={[websiteLd(), localBusinessLd()]}
+>
+  <Hero h1={home.h1} subtitle={home.hero_subtitle} eyebrow={home.hero_subtitle.includes(siteConfig.slogan) ? undefined : siteConfig.slogan} photo={heroPhoto} secondaryHref="/servicos/" secondaryLabel="Ver serviços" />
+
+  <Section tone="sand" labelledby="sec-servicos">
+    <h2 id="sec-servicos" class="mb-8 text-2xl md:text-3xl">Nossos serviços</h2>
+    <ServicesGrid headingId="sec-servicos" />
+  </Section>
+
+  <Section labelledby="sec-sobre">
+    <AboutBlock text={home.intro} headingId="sec-sobre" />
+  </Section>
+
+  <Section tone="sand" labelledby="sec-area">
+    <ServiceAreaBlock headingId="sec-area" cityLabel={sp.label} bairros={sp.bairros} />
+    <h3 class="mt-8 text-lg">Atendimento por cidade</h3>
+    <ul class="mt-3 flex flex-wrap gap-2">
+      {
+        siteConfig.cities.map((c) => (
+          <li>
+            <a href={`/atendimento/${c.slug}/`} class="inline-flex min-h-11 items-center rounded-sm border-2 border-line bg-paper px-4 text-base font-medium text-graphite no-underline hover:border-graphite">
+              {c.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </Section>
+
+  <Section labelledby="sec-galeria">
+    <Gallery photos={showcase} headingId="sec-galeria" heading="Trabalhos realizados" />
+  </Section>
+
+  <CtaBand />
+
+  <Section tone="sand" id="contato" labelledby="sec-contato">
+    <ContactForm headingId="sec-contato" />
+  </Section>
+</BaseLayout>

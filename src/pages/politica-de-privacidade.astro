@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Section from '../components/Section.astro';
+import { breadcrumbLd } from '../lib/schema';
+import { siteConfig } from '../config/siteConfig';
+
+const title = 'Política de privacidade | Signature Pisos';
+const description = 'Como a Signature Pisos trata os dados enviados pelo formulário e pelo WhatsApp, de acordo com a LGPD.';
+const crumbs = [
+  { name: 'Início', path: '/' },
+  { name: 'Política de privacidade', path: '/politica-de-privacidade/' },
+];
+---
+
+<BaseLayout title={title} description={description} path="/politica-de-privacidade/" ld={[breadcrumbLd(crumbs)]}>
+  <Breadcrumb items={crumbs} />
+  <Section labelledby="sec-privacidade">
+    <div class="prose-block max-w-prose text-base text-graphite">
+      <h1 id="sec-privacidade" class="text-3xl md:text-4xl">Política de privacidade</h1>
+      <p class="mt-6">
+        Esta página explica como o site da {siteConfig.name} trata dados pessoais, conforme a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).
+      </p>
+      <h2 class="mt-8 text-xl">Quais dados coletamos</h2>
+      <p class="mt-2">
+        Apenas os dados que você informa no formulário de contato: nome, cidade ou bairro, serviço de interesse e mensagem opcional. Não pedimos
+        telefone, documentos nem dados sensíveis.
+      </p>
+      <h2 class="mt-8 text-xl">Para que usamos</h2>
+      <p class="mt-2">Exclusivamente para responder ao seu pedido de orçamento. Não vendemos nem compartilhamos seus dados para fins de publicidade.</p>
+      <h2 class="mt-8 text-xl">WhatsApp</h2>
+      <p class="mt-2">
+        Ao tocar em um botão de WhatsApp, você é levado ao aplicativo ou site do WhatsApp, que tem a própria política de privacidade. A conversa
+        passa a ocorrer nessa plataforma.
+      </p>
+      <h2 class="mt-8 text-xl">Cookies e rastreamento</h2>
+      <p class="mt-2">Este site não usa cookies de rastreamento nem ferramentas de publicidade.</p>
+      <h2 class="mt-8 text-xl">Seus direitos</h2>
+      <p class="mt-2">
+        Você pode pedir acesso, correção ou exclusão dos dados que nos enviou, a qualquer momento, escrevendo pelo WhatsApp do site.
+      </p>
+    </div>
+  </Section>
+</BaseLayout>

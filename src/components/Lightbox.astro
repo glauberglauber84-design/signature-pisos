@@ -1,0 +1,103 @@
+---
+---
+
+<div
+  id="lightbox"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Galeria de fotos ampliada"
+  hidden
+  class="on-dark fixed inset-0 z-50 flex-col items-center justify-center bg-graphite/95 p-4"
+>
+  <div class="flex w-full max-w-3xl items-center justify-between pb-3">
+    <p id="lightbox-counter" class="text-base text-paper" aria-live="polite"></p>
+    <button
+      type="button"
+      id="lightbox-close"
+      aria-label="Fechar galeria"
+      class="inline-flex h-12 w-12 items-center justify-center rounded-sm border-2 border-paper text-paper hover:bg-paper hover:text-graphite"
+    >
+      <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" /></svg>
+    </button>
+  </div>
+  <div class="flex w-full max-w-3xl items-center gap-2">
+    <button
+      type="button"
+      id="lightbox-prev"
+      aria-label="Foto anterior"
+      class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-sm border-2 border-paper text-paper hover:bg-paper hover:text-graphite"
+    >
+      <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M15 6l-6 6 6 6" /></svg>
+    </button>
+    <img id="lightbox-img" src="" alt="" class="mx-auto max-h-[70vh] w-auto max-w-full min-w-0 flex-1 rounded-sm object-contain" />
+    <button
+      type="button"
+      id="lightbox-next"
+      aria-label="Próxima foto"
+      class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-sm border-2 border-paper text-paper hover:bg-paper hover:text-graphite"
+    >
+      <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6" /></svg>
+    </button>
+  </div>
+  <p id="lightbox-caption" class="mt-3 max-w-3xl text-center text-base text-paper"></p>
+</div>
+
+<script>
+  const box = document.getElementById('lightbox') as HTMLDivElement | null;
+  const img = document.getElementById('lightbox-img') as HTMLImageElement | null;
+  const caption = document.getElementById('lightbox-caption');
+  const counter = document.getElementById('lightbox-counter');
+  const closeBtn = document.getElementById('lightbox-close') as HTMLButtonElement | null;
+  const prevBtn = document.getElementById('lightbox-prev') as HTMLButtonElement | null;
+  const nextBtn = document.getElementById('lightbox-next') as HTMLButtonElement | null;
+  const triggers = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-lightbox-trigger]'));
+
+  if (box && img && caption && counter && closeBtn && prevBtn && nextBtn && triggers.length) {
+    let index = 0;
+    let lastTrigger: HTMLElement | null = null;
+
+    const show = (i: number): void => {
+      index = (i + triggers.length) % triggers.length;
+      const t = triggers[index];
+      img.src = t.dataset.src ?? '';
+      img.alt = t.dataset.alt ?? '';
+      caption.textContent = t.dataset.alt ?? '';
+      counter.textContent = `Foto ${index + 1} de ${triggers.length}`;
+    };
+    const open = (i: number, from: HTMLElement): void => {
+      lastTrigger = from;
+      show(i);
+      box.hidden = false;
+      box.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    };
+    const close = (): void => {
+      box.hidden = true;
+      box.style.display = '';
+      document.body.style.overflow = '';
+      lastTrigger?.focus();
+    };
+
+    triggers.forEach((t, i) => t.addEventListener('click', () => open(i, t)));
+    closeBtn.addEventListener('click', close);
+    prevBtn.addEventListener('click', () => show(index - 1));
+    nextBtn.addEventListener('click', () => show(index + 1));
+    box.addEventListener('click', (e) => {
+      if (e.target === box) close();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (box.hidden) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowLeft') show(index - 1);
+      else if (e.key === 'ArrowRight') show(index + 1);
+      else if (e.key === 'Tab') {
+        const items = [closeBtn, prevBtn, nextBtn];
+        const pos = items.indexOf(document.activeElement as HTMLButtonElement);
+        e.preventDefault();
+        const nextPos = e.shiftKey ? (pos <= 0 ? items.length - 1 : pos - 1) : (pos + 1) % items.length;
+        items[nextPos].focus();
+      }
+    });
+  }
+</script>

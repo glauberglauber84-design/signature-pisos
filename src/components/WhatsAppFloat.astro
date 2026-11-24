@@ -1,0 +1,40 @@
+---
+import WhatsAppIcon from './WhatsAppIcon.astro';
+import { whatsappLink } from '../config/siteConfig';
+---
+
+<a
+  id="wa-float"
+  href={whatsappLink()}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Falar no WhatsApp (abre em nova aba)"
+  class="fixed transition-opacity duration-200 bottom-4 right-4 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-gold text-graphite shadow-card transition-transform hover:scale-105 md:bottom-6 md:right-6"
+>
+  <WhatsAppIcon class="h-7 w-7" />
+</a>
+
+<script>
+  // Esconde o botão flutuante enquanto outro CTA de WhatsApp (ou o formulário) está visível,
+  // para nunca cobrir o botão principal nem os campos.
+  const fab = document.getElementById('wa-float');
+  const targets = document.querySelectorAll('[data-wa-cta]');
+  if (fab && targets.length && 'IntersectionObserver' in window) {
+    const visible = new Set<Element>();
+    const apply = (): void => {
+      const hide = visible.size > 0;
+      fab.classList.toggle('opacity-0', hide);
+      fab.classList.toggle('pointer-events-none', hide);
+      fab.toggleAttribute('inert', hide);
+      fab.setAttribute('aria-hidden', String(hide));
+    };
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) visible.add(e.target);
+        else visible.delete(e.target);
+      }
+      apply();
+    });
+    targets.forEach((t) => io.observe(t));
+  }
+</script>

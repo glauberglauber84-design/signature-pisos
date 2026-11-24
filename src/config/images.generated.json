@@ -1,0 +1,332 @@
+[
+  {
+    "id": "foto-29",
+    "widths": [
+      320,
+      480,
+      640,
+      736
+    ],
+    "width": 736,
+    "height": 1308,
+    "alt": "Parede de TV em efeito mármore branco com veios dourados e cinza, do piso ao teto, com nicho em mármore na base",
+    "servico": "efeito-marmore-parede",
+    "uso": "hero"
+  },
+  {
+    "id": "foto-24",
+    "widths": [
+      320,
+      480,
+      640,
+      736
+    ],
+    "width": 736,
+    "height": 1308,
+    "alt": "Parede de sala com efeito mármore branco e veios cinza, TV de parede e iluminação de LED azul no teto",
+    "servico": "efeito-marmore-parede",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-14",
+    "widths": [
+      320,
+      480
+    ],
+    "width": 480,
+    "height": 640,
+    "alt": "Parede de quarto com efeito mármore claro e veios dourados e escuros em linhas diagonais, acabamento brilhante",
+    "servico": "efeito-marmore-parede",
+    "uso": "card"
+  },
+  {
+    "id": "foto-25",
+    "widths": [
+      320,
+      480
+    ],
+    "width": 480,
+    "height": 640,
+    "alt": "Parede branca de sala com efeito mármore e veios dourados, piso de madeira",
+    "servico": "efeito-marmore-parede",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-26",
+    "widths": [
+      320,
+      480,
+      554
+    ],
+    "width": 554,
+    "height": 554,
+    "alt": "Parede longa de sala com veios dourados finos em efeito mármore, acima do piso de madeira",
+    "servico": "efeito-marmore-parede",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-27",
+    "widths": [
+      320,
+      480
+    ],
+    "width": 480,
+    "height": 640,
+    "alt": "Parede de apartamento com efeito mármore bege e veios dourados, refletindo a luz do lustre",
+    "servico": "efeito-marmore-parede",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-28",
+    "widths": [
+      320,
+      480
+    ],
+    "width": 480,
+    "height": 640,
+    "alt": "Parede com efeito mármore em tons de creme e dourado ao lado de uma porta de madeira",
+    "servico": "efeito-marmore-parede",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-13",
+    "widths": [
+      320,
+      480
+    ],
+    "width": 480,
+    "height": 640,
+    "alt": "Parede de sala com efeito mármore bege e veios dourados, acima do rodapé marrom",
+    "servico": "efeito-marmore-parede",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-17",
+    "widths": [
+      320,
+      480,
+      640
+    ],
+    "width": 640,
+    "height": 480,
+    "alt": "Parede com efeito mármore em veios finos e ramificados em dourado e cinza",
+    "servico": "efeito-marmore-parede",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-18",
+    "widths": [
+      320,
+      480
+    ],
+    "width": 480,
+    "height": 640,
+    "alt": "Parede de sala com efeito mármore branco e veios cinza e dourados, tomadas e spots no teto",
+    "servico": "efeito-marmore-parede",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-19",
+    "widths": [
+      320,
+      399
+    ],
+    "width": 399,
+    "height": 501,
+    "alt": "Parede de sala com faixa curva em tons de ocre e marrom em efeito mármore",
+    "servico": "efeito-marmore-parede",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-21",
+    "widths": [
+      320,
+      480
+    ],
+    "width": 480,
+    "height": 640,
+    "alt": "Parede de escada com efeito mármore claro e veios dourados, ao lado dos degraus de madeira",
+    "servico": "efeito-marmore-parede",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-16",
+    "widths": [
+      320,
+      480,
+      554
+    ],
+    "width": 554,
+    "height": 554,
+    "alt": "Parede de sala recebendo efeito mármore, com escada e aspirador de obra ao lado, piso em porcelanato",
+    "servico": "efeito-marmore-parede",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-09",
+    "widths": [
+      320,
+      415
+    ],
+    "width": 415,
+    "height": 739,
+    "alt": "Piso de cozinha em porcelanato líquido bege brilhante, com bancada branca e armários vermelhos",
+    "servico": "porcelanato-liquido",
+    "uso": "card"
+  },
+  {
+    "id": "foto-02",
+    "widths": [
+      320,
+      480,
+      640,
+      736
+    ],
+    "width": 736,
+    "height": 981,
+    "alt": "Piso de corredor em porcelanato líquido bege com reflexo de luz, durante a aplicação",
+    "servico": "porcelanato-liquido",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-05",
+    "widths": [
+      320,
+      376
+    ],
+    "width": 376,
+    "height": 750,
+    "alt": "Piso de banheiro em porcelanato líquido branco marmorizado com veios cinza",
+    "servico": "porcelanato-liquido",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-06",
+    "widths": [
+      320,
+      480,
+      640,
+      736
+    ],
+    "width": 736,
+    "height": 552,
+    "alt": "Piso em porcelanato líquido cinza metalizado com reflexos, em ambiente com rodapé grafite",
+    "servico": "porcelanato-liquido",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-01",
+    "widths": [
+      320,
+      384
+    ],
+    "width": 384,
+    "height": 384,
+    "alt": "Antes e depois: piso de cerâmica cinza trocado por porcelanato líquido branco brilhante",
+    "servico": "porcelanato-liquido",
+    "uso": "antes-depois"
+  },
+  {
+    "id": "foto-07",
+    "widths": [
+      320,
+      480,
+      611
+    ],
+    "width": 611,
+    "height": 357,
+    "alt": "Antes e depois de piso de banheiro: cerâmica antiga e acabamento liso em porcelanato líquido branco",
+    "servico": "porcelanato-liquido",
+    "uso": "antes-depois"
+  },
+  {
+    "id": "foto-08",
+    "widths": [
+      320,
+      480
+    ],
+    "width": 480,
+    "height": 320,
+    "alt": "Antes e depois de cozinha: piso cerâmico bege e porcelanato líquido branco liso e brilhante",
+    "servico": "porcelanato-liquido",
+    "uso": "antes-depois"
+  },
+  {
+    "id": "foto-10",
+    "widths": [
+      320,
+      480,
+      600
+    ],
+    "width": 600,
+    "height": 600,
+    "alt": "Antes e depois de cozinha de apartamento: piso cerâmico claro e porcelanato líquido branco com reflexos",
+    "servico": "porcelanato-liquido",
+    "uso": "antes-depois"
+  },
+  {
+    "id": "foto-31",
+    "widths": [
+      320,
+      480,
+      611
+    ],
+    "width": 611,
+    "height": 848,
+    "alt": "Banheiro com paredes em cimento queimado cinza aplicado, com bancada de pedra preta",
+    "servico": "cimento-queimado",
+    "uso": "card"
+  },
+  {
+    "id": "foto-32",
+    "widths": [
+      320,
+      480,
+      517
+    ],
+    "width": 517,
+    "height": 690,
+    "alt": "Detalhe de parede em cimento queimado cinza com textura de desempenadeira",
+    "servico": "cimento-queimado",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-35",
+    "widths": [
+      320,
+      480,
+      619
+    ],
+    "width": 619,
+    "height": 845,
+    "alt": "Paredes de cimento queimado cinza ao lado de uma porta branca",
+    "servico": "cimento-queimado",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-36",
+    "widths": [
+      320,
+      480,
+      582
+    ],
+    "width": 582,
+    "height": 801,
+    "alt": "Parede de banheiro com a base do cimento queimado aplicada em manchas, antes do acabamento",
+    "servico": "cimento-queimado",
+    "uso": "galeria"
+  },
+  {
+    "id": "foto-37",
+    "widths": [
+      320,
+      480,
+      585
+    ],
+    "width": 585,
+    "height": 785,
+    "alt": "Banheiro com paredes em cimento queimado cinza, vaso sanitário e bancada protegida",
+    "servico": "cimento-queimado",
+    "uso": "galeria"
+  }
+]

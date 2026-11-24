@@ -1,0 +1,31 @@
+---
+import type { Photo } from '../config/photos';
+
+interface Props {
+  photo: Photo;
+  sizes: string;
+  eager?: boolean;
+  class?: string;
+  alt?: string;
+}
+const { photo, sizes, eager = false, class: className = '', alt } = Astro.props;
+const set = (ext: 'avif' | 'webp' | 'jpg'): string => photo.widths.map((w) => `/img/${photo.id}-${w}.${ext}  ${w}w`).join(', ');
+const fallbackW = photo.widths[photo.widths.length - 1];
+---
+
+<picture>
+  <source type="image/avif" srcset={set('avif')} sizes={sizes} />
+  <source type="image/webp" srcset={set('webp')} sizes={sizes} />
+  <img
+    src={`/img/${photo.id}-${fallbackW}.jpg`}
+    srcset={set('jpg')}
+    sizes={sizes}
+    width={photo.width}
+    height={photo.height}
+    alt={alt ?? photo.alt}
+    loading={eager ? 'eager' : 'lazy'}
+    fetchpriority={eager ? 'high' : undefined}
+    decoding={eager ? 'sync' : 'async'}
+    class={className}
+  />
+</picture>

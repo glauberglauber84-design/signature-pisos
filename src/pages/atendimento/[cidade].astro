@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import Section from '../../components/Section.astro';
+import ServicesGrid from '../../components/ServicesGrid.astro';
+import ServiceAreaBlock from '../../components/ServiceAreaBlock.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { breadcrumbLd, collectionLd, localBusinessLd } from '../../lib/schema';
+import { absoluteUrl, getCity, siteConfig } from '../../config/siteConfig';
+
+export function getStaticPaths() {
+  return siteConfig.cities.map((c) => ({ params: { cidade: c.slug } }));
+}
+
+const { cidade } = Astro.params;
+const city = getCity(cidade as string);
+const path = `/atendimento/${city.slug}/`;
+const title = `Atendimento em ${city.label} | Signature Pisos`;
+const bairros = city.bairros.slice(0, 3).join(', ');
+const description = `Pisos e revestimentos em ${city.label} e bairros como ${bairros}. Veja os 8 serviços atendidos.`.slice(0, 155);
+const crumbs = [
+  { name: 'Início', path: '/' },
+  { name: 'Atendimento', path: '/atendimento/' },
+  { name: city.label, path },
+];
+const message = `Olá! Vim pelo site da Signature Pisos e gostaria de um orçamento em ${city.label}.`;
+---
+
+<BaseLayout title={title} description={description} path={path} ld={[localBusinessLd(), breadcrumbLd(crumbs), collectionLd(`Atendimento em ${city.label}`, absoluteUrl(path), description)]}>
+  <Breadcrumb items={crumbs} />
+  <Section labelledby="sec-cidade">
+    <h1 id="sec-cidade" class="text-3xl md:text-4xl">Pisos e revestimentos em {city.label}</h1>
+    <p class="mt-4 max-w-prose text-lg text-ink-soft">
+      Os 8 serviços da {siteConfig.name} disponíveis em {city.label}. Escolha um para ver detalhes, fotos e perguntas frequentes.
+    </p>
+    <h2 class="visually-hidden">Serviços disponíveis em {city.label}</h2>
+    <div class="mt-8">
+      <ServicesGrid citySlug={city.slug} headingId="sec-cidade" />
+    </div>
+  </Section>
+  <Section tone="sand" labelledby="sec-area">
+    <ServiceAreaBlock headingId="sec-area" cityLabel={city.label} bairros={city.bairros} message={message} />
+  </Section>
+  <CtaBand message={message} />
+</BaseLayout>

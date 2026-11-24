@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import Button from '../components/Button.astro';
+
+const title = 'Página não encontrada | Signature Pisos';
+const description = 'A página que você procurou não existe. Volte para o início ou veja nossos serviços.';
+---
+
+<BaseLayout title={title} description={description} path="/404/" noindex>
+  <Section labelledby="sec-404">
+    <h1 id="sec-404" class="text-3xl md:text-4xl">Página não encontrada</h1>
+    <p class="mt-4 max-w-prose text-lg text-ink-soft">O endereço pode ter mudado ou não existir. Escolha um caminho abaixo.</p>
+    <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+      <Button href="/">Voltar ao início</Button>
+      <Button href="/servicos/" variant="secondary">Ver serviços</Button>
+    </div>
+  </Section>
+</BaseLayout>
