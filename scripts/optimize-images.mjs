@@ -51,10 +51,16 @@ const PHOTOS = [
   ['foto-34', 'cimento-queimado', 'galeria', 'Canto de parede em cimento queimado cinza claro com textura de desempenadeira, ao lado de bancada protegida'],
   ['foto-38', 'cimento-queimado', 'galeria', 'Vaso sanitário branco em banheiro com paredes em cimento queimado cinza e fita verde de proteção no piso'],
   ['foto-39', 'cimento-queimado', 'galeria', 'Parede de cimento queimado em tons de cinza e marrom com textura aplicada à desempenadeira'],
+  // Imagens ilustrativas (geradas por IA), usadas como capa/card dos servicos sem foto de obra.
+  ['ia-vinilico', 'instalacao-piso-vinilico', 'card', 'Ilustração: sala com piso vinílico em réguas cor de madeira clara e rodapé branco'],
+  ['ia-laminado', 'instalacao-piso-laminado', 'card', 'Ilustração: quarto com piso laminado cinza amadeirado e rodapé branco'],
+  ['ia-madeira', 'raspagem-restauracao-piso-madeira', 'card', 'Ilustração: piso de tacos de madeira restaurado e envernizado'],
+  ['ia-granito', 'granito-liquido', 'card', 'Ilustração: bancada e piso com revestimento de granito líquido brilhante'],
+  ['ia-azulejo', 'azulejista', 'card', 'Ilustração: parede de banheiro com azulejos brancos assentados e juntas uniformes'],
 ];
 
 async function loadBase(file, opts) {
-  const buf0 = await sharp(join(SRC, `${file}.jpeg`)).rotate().toBuffer();
+  const buf0 = await sharp(join(SRC, file.startsWith('ia-') ? `${file}.png` : `${file}.jpeg`)).rotate().toBuffer();
   const meta = await sharp(buf0).metadata();
   const width = meta.width;
   let height = meta.height;

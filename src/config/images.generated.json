@@ -458,5 +458,75 @@
     "alt": "Parede de cimento queimado em tons de cinza e marrom com textura aplicada à desempenadeira",
     "servico": "cimento-queimado",
     "uso": "galeria"
+  },
+  {
+    "id": "ia-vinilico",
+    "widths": [
+      320,
+      480,
+      640,
+      736
+    ],
+    "width": 736,
+    "height": 552,
+    "alt": "Ilustração: sala com piso vinílico em réguas cor de madeira clara e rodapé branco",
+    "servico": "instalacao-piso-vinilico",
+    "uso": "card"
+  },
+  {
+    "id": "ia-laminado",
+    "widths": [
+      320,
+      480,
+      640,
+      736
+    ],
+    "width": 736,
+    "height": 552,
+    "alt": "Ilustração: quarto com piso laminado cinza amadeirado e rodapé branco",
+    "servico": "instalacao-piso-laminado",
+    "uso": "card"
+  },
+  {
+    "id": "ia-madeira",
+    "widths": [
+      320,
+      480,
+      640,
+      736
+    ],
+    "width": 736,
+    "height": 552,
+    "alt": "Ilustração: piso de tacos de madeira restaurado e envernizado",
+    "servico": "raspagem-restauracao-piso-madeira",
+    "uso": "card"
+  },
+  {
+    "id": "ia-granito",
+    "widths": [
+      320,
+      480,
+      640,
+      736
+    ],
+    "width": 736,
+    "height": 552,
+    "alt": "Ilustração: bancada e piso com revestimento de granito líquido brilhante",
+    "servico": "granito-liquido",
+    "uso": "card"
+  },
+  {
+    "id": "ia-azulejo",
+    "widths": [
+      320,
+      480,
+      640,
+      736
+    ],
+    "width": 736,
+    "height": 552,
+    "alt": "Ilustração: parede de banheiro com azulejos brancos assentados e juntas uniformes",
+    "servico": "azulejista",
+    "uso": "card"
   }
 ]

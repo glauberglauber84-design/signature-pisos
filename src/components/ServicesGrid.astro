@@ -16,7 +16,7 @@ const { citySlug, current, headingId } = Astro.props;
 <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-labelledby={headingId}>
   {
     siteConfig.services.map((s, i) => {
-      const photo = s.hasPhotos ? cardPhotoFor(s.slug) : undefined;
+      const photo = cardPhotoFor(s.slug);
       const href = citySlug ? `/${s.slug}-${citySlug}/` : `/servicos/${s.slug}/`;
       const isCurrent = current === s.slug;
       return (

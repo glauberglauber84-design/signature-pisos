@@ -36,6 +36,11 @@ const cover: Record<string, string> = {
   'efeito-marmore-parede': 'foto-29',
   'porcelanato-liquido': 'foto-09',
   'cimento-queimado': 'foto-31',
+  'instalacao-piso-vinilico': 'ia-vinilico',
+  'instalacao-piso-laminado': 'ia-laminado',
+  'raspagem-restauracao-piso-madeira': 'ia-madeira',
+  'granito-liquido': 'ia-granito',
+  'azulejista': 'ia-azulejo',
 };
 export function coverFor(servico: string): Photo | undefined {
   const id = cover[servico];
