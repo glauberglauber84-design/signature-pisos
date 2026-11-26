@@ -1,0 +1,32 @@
+---
+import { bairroLocs, pageSlug } from '../lib/pages';
+import { getService } from '../config/siteConfig';
+
+interface Props {
+  /** Lista os bairros deste serviço. */
+  servico?: string;
+  /** Lista os serviços deste bairro. */
+  bairro?: string;
+  exclude?: string;
+  label: string;
+}
+const { servico, bairro, exclude, label } = Astro.props;
+const items = bairroLocs.filter((l) => (!servico || l.servico === servico) && (!bairro || l.cidade === bairro) && l.cidade !== exclude);
+---
+
+<nav aria-label={label}>
+  <ul class="flex flex-wrap gap-2">
+    {
+      items.map((l) => (
+        <li>
+          <a
+            href={`/${pageSlug(l)}/`}
+            class="inline-flex min-h-11 items-center rounded-sm border-2 border-line bg-white px-4 py-1 text-base font-medium text-graphite no-underline hover:border-graphite"
+          >
+            {getService(l.servico).label} {l.preposicao}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

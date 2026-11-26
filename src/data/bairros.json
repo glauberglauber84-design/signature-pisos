@@ -1,0 +1,682 @@
+[
+  {
+    "servico": "instalacao-piso-vinilico",
+    "servicoLabel": "Instalação de Piso Vinílico",
+    "cidade": "barra-funda",
+    "cidadeLabel": "Barra Funda",
+    "preposicao": "na Barra Funda",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Vila Leopoldina",
+      "Perdizes",
+      "Região Central"
+    ]
+  },
+  {
+    "servico": "instalacao-piso-laminado",
+    "servicoLabel": "Instalação de Piso Laminado",
+    "cidade": "barra-funda",
+    "cidadeLabel": "Barra Funda",
+    "preposicao": "na Barra Funda",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Vila Leopoldina",
+      "Perdizes",
+      "Região Central"
+    ]
+  },
+  {
+    "servico": "raspagem-restauracao-piso-madeira",
+    "servicoLabel": "Raspagem e Restauração de Piso de Madeira",
+    "cidade": "barra-funda",
+    "cidadeLabel": "Barra Funda",
+    "preposicao": "na Barra Funda",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Vila Leopoldina",
+      "Perdizes",
+      "Região Central"
+    ]
+  },
+  {
+    "servico": "porcelanato-liquido",
+    "servicoLabel": "Porcelanato Líquido",
+    "cidade": "barra-funda",
+    "cidadeLabel": "Barra Funda",
+    "preposicao": "na Barra Funda",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Vila Leopoldina",
+      "Perdizes",
+      "Região Central"
+    ]
+  },
+  {
+    "servico": "cimento-queimado",
+    "servicoLabel": "Cimento Queimado",
+    "cidade": "barra-funda",
+    "cidadeLabel": "Barra Funda",
+    "preposicao": "na Barra Funda",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Vila Leopoldina",
+      "Perdizes",
+      "Região Central"
+    ]
+  },
+  {
+    "servico": "granito-liquido",
+    "servicoLabel": "Granito Líquido",
+    "cidade": "barra-funda",
+    "cidadeLabel": "Barra Funda",
+    "preposicao": "na Barra Funda",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Vila Leopoldina",
+      "Perdizes",
+      "Região Central"
+    ]
+  },
+  {
+    "servico": "efeito-marmore-parede",
+    "servicoLabel": "Efeito Mármore em Parede",
+    "cidade": "barra-funda",
+    "cidadeLabel": "Barra Funda",
+    "preposicao": "na Barra Funda",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Vila Leopoldina",
+      "Perdizes",
+      "Região Central"
+    ]
+  },
+  {
+    "servico": "azulejista",
+    "servicoLabel": "Azulejista",
+    "cidade": "barra-funda",
+    "cidadeLabel": "Barra Funda",
+    "preposicao": "na Barra Funda",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Vila Leopoldina",
+      "Perdizes",
+      "Região Central"
+    ]
+  },
+  {
+    "servico": "instalacao-piso-vinilico",
+    "servicoLabel": "Instalação de Piso Vinílico",
+    "cidade": "vila-leopoldina",
+    "cidadeLabel": "Vila Leopoldina",
+    "preposicao": "na Vila Leopoldina",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Barra Funda",
+      "Perdizes"
+    ]
+  },
+  {
+    "servico": "instalacao-piso-laminado",
+    "servicoLabel": "Instalação de Piso Laminado",
+    "cidade": "vila-leopoldina",
+    "cidadeLabel": "Vila Leopoldina",
+    "preposicao": "na Vila Leopoldina",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Barra Funda",
+      "Perdizes"
+    ]
+  },
+  {
+    "servico": "raspagem-restauracao-piso-madeira",
+    "servicoLabel": "Raspagem e Restauração de Piso de Madeira",
+    "cidade": "vila-leopoldina",
+    "cidadeLabel": "Vila Leopoldina",
+    "preposicao": "na Vila Leopoldina",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Barra Funda",
+      "Perdizes"
+    ]
+  },
+  {
+    "servico": "porcelanato-liquido",
+    "servicoLabel": "Porcelanato Líquido",
+    "cidade": "vila-leopoldina",
+    "cidadeLabel": "Vila Leopoldina",
+    "preposicao": "na Vila Leopoldina",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Barra Funda",
+      "Perdizes"
+    ]
+  },
+  {
+    "servico": "cimento-queimado",
+    "servicoLabel": "Cimento Queimado",
+    "cidade": "vila-leopoldina",
+    "cidadeLabel": "Vila Leopoldina",
+    "preposicao": "na Vila Leopoldina",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Barra Funda",
+      "Perdizes"
+    ]
+  },
+  {
+    "servico": "granito-liquido",
+    "servicoLabel": "Granito Líquido",
+    "cidade": "vila-leopoldina",
+    "cidadeLabel": "Vila Leopoldina",
+    "preposicao": "na Vila Leopoldina",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Barra Funda",
+      "Perdizes"
+    ]
+  },
+  {
+    "servico": "efeito-marmore-parede",
+    "servicoLabel": "Efeito Mármore em Parede",
+    "cidade": "vila-leopoldina",
+    "cidadeLabel": "Vila Leopoldina",
+    "preposicao": "na Vila Leopoldina",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Barra Funda",
+      "Perdizes"
+    ]
+  },
+  {
+    "servico": "azulejista",
+    "servicoLabel": "Azulejista",
+    "cidade": "vila-leopoldina",
+    "cidadeLabel": "Vila Leopoldina",
+    "preposicao": "na Vila Leopoldina",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Barra Funda",
+      "Perdizes"
+    ]
+  },
+  {
+    "servico": "instalacao-piso-vinilico",
+    "servicoLabel": "Instalação de Piso Vinílico",
+    "cidade": "perdizes",
+    "cidadeLabel": "Perdizes",
+    "preposicao": "em Perdizes",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Barra Funda",
+      "Vila Leopoldina"
+    ]
+  },
+  {
+    "servico": "instalacao-piso-laminado",
+    "servicoLabel": "Instalação de Piso Laminado",
+    "cidade": "perdizes",
+    "cidadeLabel": "Perdizes",
+    "preposicao": "em Perdizes",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Barra Funda",
+      "Vila Leopoldina"
+    ]
+  },
+  {
+    "servico": "raspagem-restauracao-piso-madeira",
+    "servicoLabel": "Raspagem e Restauração de Piso de Madeira",
+    "cidade": "perdizes",
+    "cidadeLabel": "Perdizes",
+    "preposicao": "em Perdizes",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Barra Funda",
+      "Vila Leopoldina"
+    ]
+  },
+  {
+    "servico": "porcelanato-liquido",
+    "servicoLabel": "Porcelanato Líquido",
+    "cidade": "perdizes",
+    "cidadeLabel": "Perdizes",
+    "preposicao": "em Perdizes",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Barra Funda",
+      "Vila Leopoldina"
+    ]
+  },
+  {
+    "servico": "cimento-queimado",
+    "servicoLabel": "Cimento Queimado",
+    "cidade": "perdizes",
+    "cidadeLabel": "Perdizes",
+    "preposicao": "em Perdizes",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Barra Funda",
+      "Vila Leopoldina"
+    ]
+  },
+  {
+    "servico": "granito-liquido",
+    "servicoLabel": "Granito Líquido",
+    "cidade": "perdizes",
+    "cidadeLabel": "Perdizes",
+    "preposicao": "em Perdizes",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Barra Funda",
+      "Vila Leopoldina"
+    ]
+  },
+  {
+    "servico": "efeito-marmore-parede",
+    "servicoLabel": "Efeito Mármore em Parede",
+    "cidade": "perdizes",
+    "cidadeLabel": "Perdizes",
+    "preposicao": "em Perdizes",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Barra Funda",
+      "Vila Leopoldina"
+    ]
+  },
+  {
+    "servico": "azulejista",
+    "servicoLabel": "Azulejista",
+    "cidade": "perdizes",
+    "cidadeLabel": "Perdizes",
+    "preposicao": "em Perdizes",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Barra Funda",
+      "Vila Leopoldina"
+    ]
+  },
+  {
+    "servico": "instalacao-piso-vinilico",
+    "servicoLabel": "Instalação de Piso Vinílico",
+    "cidade": "vila-mariana",
+    "cidadeLabel": "Vila Mariana",
+    "preposicao": "na Vila Mariana",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Zona Sul",
+      "Região Central"
+    ]
+  },
+  {
+    "servico": "instalacao-piso-laminado",
+    "servicoLabel": "Instalação de Piso Laminado",
+    "cidade": "vila-mariana",
+    "cidadeLabel": "Vila Mariana",
+    "preposicao": "na Vila Mariana",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Zona Sul",
+      "Região Central"
+    ]
+  },
+  {
+    "servico": "raspagem-restauracao-piso-madeira",
+    "servicoLabel": "Raspagem e Restauração de Piso de Madeira",
+    "cidade": "vila-mariana",
+    "cidadeLabel": "Vila Mariana",
+    "preposicao": "na Vila Mariana",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Zona Sul",
+      "Região Central"
+    ]
+  },
+  {
+    "servico": "porcelanato-liquido",
+    "servicoLabel": "Porcelanato Líquido",
+    "cidade": "vila-mariana",
+    "cidadeLabel": "Vila Mariana",
+    "preposicao": "na Vila Mariana",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Zona Sul",
+      "Região Central"
+    ]
+  },
+  {
+    "servico": "cimento-queimado",
+    "servicoLabel": "Cimento Queimado",
+    "cidade": "vila-mariana",
+    "cidadeLabel": "Vila Mariana",
+    "preposicao": "na Vila Mariana",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Zona Sul",
+      "Região Central"
+    ]
+  },
+  {
+    "servico": "granito-liquido",
+    "servicoLabel": "Granito Líquido",
+    "cidade": "vila-mariana",
+    "cidadeLabel": "Vila Mariana",
+    "preposicao": "na Vila Mariana",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Zona Sul",
+      "Região Central"
+    ]
+  },
+  {
+    "servico": "efeito-marmore-parede",
+    "servicoLabel": "Efeito Mármore em Parede",
+    "cidade": "vila-mariana",
+    "cidadeLabel": "Vila Mariana",
+    "preposicao": "na Vila Mariana",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Zona Sul",
+      "Região Central"
+    ]
+  },
+  {
+    "servico": "azulejista",
+    "servicoLabel": "Azulejista",
+    "cidade": "vila-mariana",
+    "cidadeLabel": "Vila Mariana",
+    "preposicao": "na Vila Mariana",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Zona Sul",
+      "Região Central"
+    ]
+  },
+  {
+    "servico": "instalacao-piso-vinilico",
+    "servicoLabel": "Instalação de Piso Vinílico",
+    "cidade": "regiao-central",
+    "cidadeLabel": "Região Central",
+    "preposicao": "no Centro de São Paulo",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Barra Funda",
+      "Vila Mariana"
+    ]
+  },
+  {
+    "servico": "instalacao-piso-laminado",
+    "servicoLabel": "Instalação de Piso Laminado",
+    "cidade": "regiao-central",
+    "cidadeLabel": "Região Central",
+    "preposicao": "no Centro de São Paulo",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Barra Funda",
+      "Vila Mariana"
+    ]
+  },
+  {
+    "servico": "raspagem-restauracao-piso-madeira",
+    "servicoLabel": "Raspagem e Restauração de Piso de Madeira",
+    "cidade": "regiao-central",
+    "cidadeLabel": "Região Central",
+    "preposicao": "no Centro de São Paulo",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Barra Funda",
+      "Vila Mariana"
+    ]
+  },
+  {
+    "servico": "porcelanato-liquido",
+    "servicoLabel": "Porcelanato Líquido",
+    "cidade": "regiao-central",
+    "cidadeLabel": "Região Central",
+    "preposicao": "no Centro de São Paulo",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Barra Funda",
+      "Vila Mariana"
+    ]
+  },
+  {
+    "servico": "cimento-queimado",
+    "servicoLabel": "Cimento Queimado",
+    "cidade": "regiao-central",
+    "cidadeLabel": "Região Central",
+    "preposicao": "no Centro de São Paulo",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Barra Funda",
+      "Vila Mariana"
+    ]
+  },
+  {
+    "servico": "granito-liquido",
+    "servicoLabel": "Granito Líquido",
+    "cidade": "regiao-central",
+    "cidadeLabel": "Região Central",
+    "preposicao": "no Centro de São Paulo",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Barra Funda",
+      "Vila Mariana"
+    ]
+  },
+  {
+    "servico": "efeito-marmore-parede",
+    "servicoLabel": "Efeito Mármore em Parede",
+    "cidade": "regiao-central",
+    "cidadeLabel": "Região Central",
+    "preposicao": "no Centro de São Paulo",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Barra Funda",
+      "Vila Mariana"
+    ]
+  },
+  {
+    "servico": "azulejista",
+    "servicoLabel": "Azulejista",
+    "cidade": "regiao-central",
+    "cidadeLabel": "Região Central",
+    "preposicao": "no Centro de São Paulo",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Barra Funda",
+      "Vila Mariana"
+    ]
+  },
+  {
+    "servico": "instalacao-piso-vinilico",
+    "servicoLabel": "Instalação de Piso Vinílico",
+    "cidade": "zona-sul",
+    "cidadeLabel": "Zona Sul",
+    "preposicao": "na Zona Sul de São Paulo",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Vila Mariana",
+      "Região Central"
+    ]
+  },
+  {
+    "servico": "instalacao-piso-laminado",
+    "servicoLabel": "Instalação de Piso Laminado",
+    "cidade": "zona-sul",
+    "cidadeLabel": "Zona Sul",
+    "preposicao": "na Zona Sul de São Paulo",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Vila Mariana",
+      "Região Central"
+    ]
+  },
+  {
+    "servico": "raspagem-restauracao-piso-madeira",
+    "servicoLabel": "Raspagem e Restauração de Piso de Madeira",
+    "cidade": "zona-sul",
+    "cidadeLabel": "Zona Sul",
+    "preposicao": "na Zona Sul de São Paulo",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Vila Mariana",
+      "Região Central"
+    ]
+  },
+  {
+    "servico": "porcelanato-liquido",
+    "servicoLabel": "Porcelanato Líquido",
+    "cidade": "zona-sul",
+    "cidadeLabel": "Zona Sul",
+    "preposicao": "na Zona Sul de São Paulo",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Vila Mariana",
+      "Região Central"
+    ]
+  },
+  {
+    "servico": "cimento-queimado",
+    "servicoLabel": "Cimento Queimado",
+    "cidade": "zona-sul",
+    "cidadeLabel": "Zona Sul",
+    "preposicao": "na Zona Sul de São Paulo",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Vila Mariana",
+      "Região Central"
+    ]
+  },
+  {
+    "servico": "granito-liquido",
+    "servicoLabel": "Granito Líquido",
+    "cidade": "zona-sul",
+    "cidadeLabel": "Zona Sul",
+    "preposicao": "na Zona Sul de São Paulo",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Vila Mariana",
+      "Região Central"
+    ]
+  },
+  {
+    "servico": "efeito-marmore-parede",
+    "servicoLabel": "Efeito Mármore em Parede",
+    "cidade": "zona-sul",
+    "cidadeLabel": "Zona Sul",
+    "preposicao": "na Zona Sul de São Paulo",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Vila Mariana",
+      "Região Central"
+    ]
+  },
+  {
+    "servico": "azulejista",
+    "servicoLabel": "Azulejista",
+    "cidade": "zona-sul",
+    "cidadeLabel": "Zona Sul",
+    "preposicao": "na Zona Sul de São Paulo",
+    "estado": "SP",
+    "principal": false,
+    "cidadePai": "sao-paulo",
+    "bairros": [
+      "Vila Mariana",
+      "Região Central"
+    ]
+  }
+]

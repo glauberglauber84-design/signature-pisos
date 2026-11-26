@@ -1,0 +1,21 @@
+{
+  "title": "Azulejista na Zona Sul de São Paulo",
+  "description": "Azulejista na Zona Sul para banheiros, cozinhas, áreas de serviço e quintais com caimento. Chame no WhatsApp.",
+  "h1": "Azulejista na Zona Sul de São Paulo",
+  "hero_subtitle": "Pisos e paredes cerâmicas em casas e apartamentos, por dentro e nas áreas de serviço.",
+  "sobre_texto": "Nas casas da Zona Sul, o azulejista é chamado tanto para o banheiro quanto para a área de serviço aberta, o corredor lateral e o quintal. Do lado de fora, as regras mudam: a peça precisa ser indicada para área externa, ter boa aderência quando molhada e ser assentada com argamassa adequada à exposição.\n\nO caimento é o que separa um quintal que seca de um que vira poça. A inclinação deve levar a água ao ralo e nunca para a porta da casa. Conferimos isso no contrapiso, antes de assentar, porque corrigir depois significa arrancar o piso.\n\nÁreas grandes ao sol também precisam de juntas de movimentação, que absorvem a dilatação e ajudam a evitar peças estufadas. Dentro de casa, seguimos com paginação, nivelamento e rejunte apropriado a cada ambiente. Em apartamentos, combinamos ainda os horários de corte e a movimentação de entulho conforme o condomínio.",
+  "faq": [
+    {
+      "pergunta": "Que piso colocar no quintal?",
+      "resposta": "Escolha uma peça indicada para área externa e com resistência ao escorregamento quando molhada. Porcelanato polido não é recomendável. Confira a ficha técnica antes de comprar."
+    },
+    {
+      "pergunta": "O piso do quintal estufou. Por que acontece?",
+      "resposta": "Causas comuns são falta de juntas de movimentação, argamassa inadequada ou falhas de preenchimento sob a peça. Avaliamos a origem antes de refazer o trecho."
+    },
+    {
+      "pergunta": "Dá para corrigir o caimento sem trocar todo o piso?",
+      "resposta": "Depende da extensão do problema. Correções localizadas às vezes funcionam perto do ralo, mas inclinação errada em toda a área exige refazer o contrapiso e o assentamento."
+    }
+  ]
+}

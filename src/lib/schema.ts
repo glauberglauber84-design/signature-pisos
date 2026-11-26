@@ -46,6 +46,7 @@ export function serviceLd(opts: {
   url: string;
   description: string;
   image?: string;
+  bairro?: boolean;
 }): Ld {
   return {
     '@context': 'https://schema.org',
@@ -55,7 +56,9 @@ export function serviceLd(opts: {
     description: opts.description,
     url: opts.url,
     provider: { '@id': businessId() },
-    areaServed: cityNode(opts.cityLabel),
+    areaServed: opts.bairro
+      ? { '@type': 'Place', name: opts.cityLabel, containedInPlace: cityNode('São Paulo') }
+      : cityNode(opts.cityLabel),
     ...(opts.image ? { image: opts.image } : {}),
   };
 }

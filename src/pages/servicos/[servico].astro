@@ -1,4 +1,5 @@
 ---
+import BairroLinks from '../../components/BairroLinks.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import Hero from '../../components/Hero.astro';
@@ -62,6 +63,8 @@ const message = `Olá! Vim pelo site da Signature Pisos e gostaria de um orçame
         ))
       }
     </ul>
+    <h3 class="mb-4 mt-12 text-xl">{service.label} por bairro de São Paulo</h3>
+    <BairroLinks servico={service.slug} label={`${service.label} por bairro`} />
   </Section>
 
   <Section labelledby={service.hasPhotos ? 'sec-galeria' : 'sec-etapas'}>

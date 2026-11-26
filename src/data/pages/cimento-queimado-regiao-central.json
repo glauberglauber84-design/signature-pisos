@@ -1,0 +1,21 @@
+{
+  "title": "Cimento Queimado no Centro de São Paulo",
+  "description": "Cimento queimado no Centro de SP para studios, bares e escritórios com pé-direito alto. Orçamento pelo WhatsApp.",
+  "h1": "Cimento Queimado no Centro de São Paulo",
+  "hero_subtitle": "Paredes e pisos cimentícios para studios, bares, coworkings e escritórios.",
+  "sobre_texto": "A reocupação de imóveis no Centro tem trazido studios, bares e espaços de trabalho que assumem a idade do prédio. O cimento queimado acompanha essa linguagem: convive com colunas, vigas aparentes e janelas antigas sem parecer um cenário novo colado sobre o imóvel.\n\nPé-direito alto muda a execução. A aplicação em panos grandes precisa de ritmo contínuo para não deixar marca de parada no meio da parede, e o trabalho em altura pede apoio seguro. Planejamos a divisão das superfícies usando quinas e interrupções naturais.\n\nParedes grossas de construções antigas podem reter umidade por muito tempo. Bolhas, pó branco e reboco estufado indicam que há água ou sais, e nenhum revestimento decorativo resolve isso por cima. Primeiro se trata a causa. Depois removemos o material comprometido, recompomos a base, aguardamos a secagem e só então aplicamos as camadas e o selador.",
+  "faq": [
+    {
+      "pergunta": "A parede solta um pó branco. Posso aplicar por cima?",
+      "resposta": "Não. Isso costuma indicar sais trazidos por umidade, e o revestimento tende a descolar. É preciso identificar a origem, corrigir e preparar a base antes."
+    },
+    {
+      "pergunta": "Parede muito alta fica com emenda aparente?",
+      "resposta": "Planejamos a aplicação para completar cada pano sem interrupção sempre que possível. Em superfícies muito grandes, usamos quinas ou divisões do próprio ambiente como limite."
+    },
+    {
+      "pergunta": "Serve para parede de bar com muito contato?",
+      "resposta": "Serve com proteção adequada. Perto de mesas e bancos, o atrito é maior, e um reforço no acabamento ou um barrado em outro material pode ser considerado."
+    }
+  ]
+}

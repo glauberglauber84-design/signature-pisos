@@ -12,7 +12,8 @@ import HowWeWork from '../components/HowWeWork.astro';
 import Faq from '../components/Faq.astro';
 import ContactForm from '../components/ContactForm.astro';
 import CtaBand from '../components/CtaBand.astro';
-import { allLocs, getPageData, pageSlug, validateContent } from '../lib/pages';
+import BairroLinks from '../components/BairroLinks.astro';
+import { allPages, getPageData, pageSlug, validateContent } from '../lib/pages';
 import type { Loc } from '../lib/pages';
 import { siteConfig, getService, absoluteUrl } from '../config/siteConfig';
 import { beforeAfterFor, coverFor, galleryFor } from '../config/photos';
@@ -20,7 +21,7 @@ import { breadcrumbLd, faqLd, localBusinessLd, serviceLd } from '../lib/schema';
 
 export function getStaticPaths() {
   validateContent();
-  return allLocs.map((loc) => ({ params: { slug: pageSlug(loc) }, props: { loc } }));
+  return allPages.map((loc) => ({ params: { slug: pageSlug(loc) }, props: { loc } }));
 }
 
 interface Props {
@@ -35,17 +36,20 @@ const crumbs = [
   { name: 'Início', path: '/' },
   { name: 'Serviços', path: '/servicos/' },
   { name: service.label, path: `/servicos/${service.slug}/` },
+  ...(loc.cidadePai ? [{ name: 'São Paulo', path: `/${service.slug}-${loc.cidadePai}/` }] : []),
   { name: loc.cidadeLabel, path },
 ];
 const gallery = service.hasPhotos ? galleryFor(loc.servico) : [];
 const beforeAfter = service.hasPhotos ? beforeAfterFor(loc.servico) : [];
-const message = `Olá! Vim pelo site da Signature Pisos e gostaria de um orçamento de ${service.label} em ${loc.cidadeLabel}.`;
+const onde = loc.preposicao ?? `em ${loc.cidadeLabel}`;
+const message = `Olá! Vim pelo site da Signature Pisos e gostaria de um orçamento de ${service.label} ${onde}.`;
 const ld = [
   localBusinessLd(),
   serviceLd({
-    name: `${service.label} em ${loc.cidadeLabel}`,
+    name: `${service.label} ${onde}`,
     serviceType: service.label,
     cityLabel: loc.cidadeLabel,
+    bairro: Boolean(loc.cidadePai),
     url: absoluteUrl(path),
     description: content.description,
   }),
@@ -67,7 +71,7 @@ const ld = [
   />
 
   <Section tone="sand" labelledby="sec-servicos">
-    <h2 id="sec-servicos" class="mb-8 text-2xl md:text-3xl">Serviços em {loc.cidadeLabel}</h2>
+    <h2 id="sec-servicos" class="mb-8 text-2xl md:text-3xl">Serviços {onde}</h2>
     <ServicesGrid citySlug={loc.cidade} current={loc.servico} headingId="sec-servicos" />
   </Section>
 
@@ -76,13 +80,41 @@ const ld = [
   </Section>
 
   <Section tone="sand" labelledby="sec-area">
-    <ServiceAreaBlock headingId="sec-area" cityLabel={loc.cidadeLabel} bairros={loc.bairros} servico={loc.servico} cidade={loc.cidade} message={message} />
-    <p class="mt-8 text-base text-graphite">
-      Veja também:
-      <a href={`/servicos/${service.slug}/`} class="font-semibold text-accent-strong underline">todas as cidades com {service.label}</a>
-      e
-      <a href={`/atendimento/${loc.cidade}/`} class="font-semibold text-accent-strong underline">todos os serviços em {loc.cidadeLabel}</a>.
-    </p>
+    {
+      loc.cidadePai ? (
+        <>
+          <h2 id="sec-area" class="text-2xl md:text-3xl">{service.label} perto de você</h2>
+          <p class="mt-4 max-w-prose text-base text-graphite">
+            Além de atender {onde}, fazemos o mesmo serviço em outros bairros de São Paulo.
+          </p>
+          <div class="mt-4">
+            <BairroLinks servico={loc.servico} exclude={loc.cidade} label={`${service.label} em outros bairros`} />
+          </div>
+          <p class="mt-8 text-base text-graphite">
+            Veja também:
+            <a href={`/servicos/${service.slug}/`} class="font-semibold text-accent-strong underline">todas as cidades com {service.label}</a>
+            e
+            <a href={`/atendimento/${loc.cidadePai}/`} class="font-semibold text-accent-strong underline">todos os serviços em São Paulo</a>.
+          </p>
+        </>
+      ) : (
+        <>
+      <ServiceAreaBlock headingId="sec-area" cityLabel={loc.cidadeLabel} bairros={loc.bairros} servico={loc.servico} cidade={loc.cidade} message={message} />
+      <p class="mt-8 text-base text-graphite">
+        Veja também:
+        <a href={`/servicos/${service.slug}/`} class="font-semibold text-accent-strong underline">todas as cidades com {service.label}</a>
+        e
+        <a href={`/atendimento/${loc.cidade}/`} class="font-semibold text-accent-strong underline">todos os serviços em {loc.cidadeLabel}</a>.
+      </p>
+          {loc.cidade === 'sao-paulo' && (
+            <div class="mt-8">
+              <h3 class="mb-3 text-lg">{service.label} por bairro</h3>
+              <BairroLinks servico={loc.servico} label={`${service.label} por bairro de São Paulo`} />
+            </div>
+          )}
+        </>
+      )
+    }
   </Section>
 
   <Section labelledby={service.hasPhotos ? 'sec-galeria' : 'sec-etapas'}>
@@ -102,6 +134,6 @@ const ld = [
   <CtaBand message={message} />
 
   <Section tone="paper" compact id="contato" labelledby="sec-contato" class="border-t border-line">
-    <ContactForm compact headingId="sec-contato" defaultService={loc.servico} defaultCity={loc.cidade} />
+    <ContactForm compact headingId="sec-contato" defaultService={loc.servico} defaultCity={loc.cidadePai ?? loc.cidade} />
   </Section>
 </BaseLayout>

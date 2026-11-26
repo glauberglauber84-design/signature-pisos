@@ -1,0 +1,21 @@
+{
+  "title": "Cimento Queimado na Vila Mariana",
+  "description": "Cimento queimado na Vila Mariana para sobrados reformados, escadas, salas comerciais e lavabos. Orçamento no WhatsApp.",
+  "h1": "Cimento Queimado na Vila Mariana",
+  "hero_subtitle": "Revestimento cimentício para sobrados em reforma, comércio de rua e apartamentos.",
+  "sobre_texto": "Sobrados reformados da Vila Mariana, seja para morar, seja para abrir um café ou ateliê, costumam usar o cimento queimado para unir ambientes que antes tinham acabamentos diferentes. Uma textura contínua organiza visualmente cômodos pequenos.\n\nReforma de sobrado normalmente junta paredes velhas e trechos novos de alvenaria ou drywall. Cada um absorve o material de um jeito e se movimenta de modo próprio. Respeitar a cura do reboco novo e tratar os encontros diminui o risco de fissura justamente na divisa entre eles.\n\nNo piso, perguntamos se a área recebe mesas arrastadas, bancos de metal ou grande fluxo de clientes. Esse uso orienta a proteção final e a frequência de manutenção. Nas paredes de comércio, cantos expostos podem pedir cantoneira para resistir a batidas. São ajustes simples quando pensados antes e trabalhosos quando o acabamento já está pronto.",
+  "faq": [
+    {
+      "pergunta": "O reboco novo precisa esperar quanto tempo?",
+      "resposta": "Precisa estar curado e seco, e o tempo varia com espessura, clima e material usado. Conferimos a condição da parede antes de aplicar, em vez de contar apenas os dias."
+    },
+    {
+      "pergunta": "Pode dar fissura entre a parede velha e a nova?",
+      "resposta": "Há risco, porque os materiais se movimentam de forma diferente. Tratamento da junta reduz a chance, mas movimentação estrutural não é contida pelo revestimento."
+    },
+    {
+      "pergunta": "Serve para piso de café com muito movimento?",
+      "resposta": "Pode servir, com preparo e proteção compatíveis e manutenção periódica. O acabamento vai adquirir marcas de uso. Se isso incomodar, vale discutir outra opção."
+    }
+  ]
+}

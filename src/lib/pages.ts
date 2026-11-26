@@ -1,4 +1,5 @@
 import locais from '../data/locais.json';
+import bairros from '../data/bairros.json';
 import { siteConfig } from '../config/siteConfig';
 
 export interface Loc {
@@ -10,6 +11,10 @@ export interface Loc {
   principal: boolean;
   bairros: string[];
   servicoPrincipal?: boolean;
+  /** Só em páginas de bairro: slug da cidade a que o bairro pertence. */
+  cidadePai?: string;
+  /** Só em páginas de bairro: "na Barra Funda", "em Perdizes". */
+  preposicao?: string;
 }
 
 export interface FaqItem {
@@ -42,6 +47,9 @@ export interface HomeContent {
 }
 
 export const allLocs = locais as Loc[];
+/** Serviço x bairro de São Paulo. Fica fora de allLocs para não virar "cidade" nos menus. */
+export const bairroLocs = bairros as Loc[];
+export const allPages: Loc[] = [...allLocs, ...bairroLocs];
 
 const modules = import.meta.glob('/src/data/pages/*.json', { eager: true }) as Record<string, { default: unknown }>;
 const byName = new Map<string, unknown>();
@@ -71,7 +79,7 @@ function fallbackPage(l: Loc): PageContent {
 }
 
 export function getPageData(servico: string, cidade: string): Loaded<PageContent> {
-  const loc = allLocs.find((l) => l.servico === servico && l.cidade === cidade);
+  const loc = allPages.find((l) => l.servico === servico && l.cidade === cidade);
   if (!loc) throw new Error(`Local desconhecido: ${servico}-${cidade}`);
   const raw = byName.get(`${servico}-${cidade}`) as PageContent | undefined;
   if (raw) return { data: raw, missing: false };
@@ -126,7 +134,7 @@ export function validateContent(): void {
     if (!c.h1) problems.push(`${name}: h1 ausente`);
   };
 
-  for (const l of allLocs) {
+  for (const l of allPages) {
     const name = pageSlug(l);
     const raw = byName.get(name) as PageContent | undefined;
     if (!raw) {

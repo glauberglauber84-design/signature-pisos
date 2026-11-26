@@ -1,4 +1,6 @@
 ---
+import BairroLinks from '../../components/BairroLinks.astro';
+import { bairroLocs } from '../../lib/pages';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import Section from '../../components/Section.astro';
@@ -38,6 +40,21 @@ const message = `Olá! Vim pelo site da Signature Pisos e gostaria de um orçame
       <ServicesGrid citySlug={city.slug} headingId="sec-cidade" />
     </div>
   </Section>
+  {
+    city.slug === 'sao-paulo' && (
+      <Section labelledby="sec-bairros">
+        <h2 id="sec-bairros" class="mb-6 text-2xl md:text-3xl">Serviços por bairro de São Paulo</h2>
+        <div class="grid gap-8">
+          {[...new Map(bairroLocs.map((l) => [l.cidade, l.cidadeLabel]))].map(([slug, nome]) => (
+            <div>
+              <h3 class="mb-3 text-xl">{nome}</h3>
+              <BairroLinks bairro={slug} label={`Serviços: ${nome}`} />
+            </div>
+          ))}
+        </div>
+      </Section>
+    )
+  }
   <Section tone="sand" labelledby="sec-area">
     <ServiceAreaBlock headingId="sec-area" cityLabel={city.label} bairros={city.bairros} message={message} />
   </Section>
