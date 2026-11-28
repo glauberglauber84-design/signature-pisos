@@ -1,0 +1,80 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import Section from '../../components/Section.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { articleLd, breadcrumbLd, localBusinessLd } from '../../lib/schema';
+import { absoluteUrl, siteConfig } from '../../config/siteConfig';
+import { formatDate, getPosts, type Post } from '../../lib/blog';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+interface Props {
+  post: Post;
+}
+const { post } = Astro.props;
+const { data } = post;
+const { Content } = await render(post);
+const path = `/blog/${post.id}/`;
+const service = siteConfig.services.find((s) => s.slug === data.servico);
+if (data.servico && !service) throw new Error(`[blog] ${post.id}: serviço desconhecido "${data.servico}"`);
+const outros = (await getPosts()).filter((p) => p.id !== post.id).slice(0, 3);
+const crumbs = [
+  { name: 'Início', path: '/' },
+  { name: 'Blog', path: '/blog/' },
+  { name: data.titulo, path },
+];
+const ld = [
+  localBusinessLd(),
+  breadcrumbLd(crumbs),
+  articleLd({
+    headline: data.titulo,
+    description: data.descricao,
+    url: absoluteUrl(path),
+    published: data.data,
+    modified: data.atualizado,
+    image: data.imagem ? absoluteUrl(data.imagem) : undefined,
+  }),
+];
+---
+
+<BaseLayout title={data.tituloSeo} description={data.descricao} path={path} image={data.imagem} imageAlt={data.imagemAlt} ld={ld}>
+  <Breadcrumb items={crumbs} />
+  <Section labelledby="sec-artigo">
+    <article class="mx-auto max-w-prose">
+      <h1 id="sec-artigo" class="text-3xl md:text-4xl">{data.titulo}</h1>
+      <p class="mt-4 text-base text-ink-soft">
+        Por {siteConfig.name} · <time datetime={data.data.toISOString().slice(0, 10)}>{formatDate(data.data)}</time>
+        {data.atualizado && <> · Atualizado em {formatDate(data.atualizado)}</>}
+      </p>
+      {data.imagem && <img src={data.imagem} alt={data.imagemAlt ?? ''} width="1200" height="900" fetchpriority="high" class="mt-8 h-auto w-full rounded-sm" />}
+      <div class="article-body mt-8 text-base text-graphite">
+        <Content />
+      </div>
+      {
+        service && (
+          <p class="mt-8 rounded-sm border-2 border-line bg-paper p-6 text-base text-graphite">
+            Conheça o serviço: <a href={`/servicos/${service.slug}/`} class="font-semibold text-accent-strong underline">{service.label}</a>
+          </p>
+        )
+      }
+      {
+        outros.length > 0 && (
+          <nav aria-label="Outros artigos" class="mt-12">
+            <h2 class="text-2xl">Leia também</h2>
+            <ul class="mt-4">
+              {outros.map((p) => (
+                <li><a href={`/blog/${p.id}/`} class="inline-flex min-h-11 items-center text-base text-accent-strong underline">{p.data.titulo}</a></li>
+              ))}
+            </ul>
+          </nav>
+        )
+      }
+    </article>
+  </Section>
+  <CtaBand />
+</BaseLayout>

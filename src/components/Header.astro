@@ -11,6 +11,7 @@ const { current = '' } = Astro.props;
 const nav = [
   { label: 'Serviços', href: '/servicos/' },
   { label: 'Atendimento', href: '/atendimento/' },
+  { label: 'Blog', href: '/blog/' },
   { label: 'Sobre', href: '/sobre/' },
   { label: 'Contato', href: '/contato/' },
 ];
@@ -22,7 +23,7 @@ const nav = [
       <Logo width={150} eager class="h-auto w-[150px] mix-blend-multiply" />
     </a>
 
-    <nav aria-label="Principal" class="hidden items-center gap-6 md:flex">
+    <nav aria-label="Principal" class="hidden items-center gap-6 lg:flex">
       <ul class="flex items-center gap-2">
         {
           nav.map((item) => (
@@ -44,7 +45,7 @@ const nav = [
     <button
       type="button"
       id="menu-toggle"
-      class="inline-flex min-h-11 min-w-11 items-center justify-center rounded-sm border-2 border-graphite px-3 text-graphite md:hidden"
+      class="inline-flex min-h-11 min-w-11 items-center justify-center rounded-sm border-2 border-graphite px-3 text-graphite lg:hidden"
       aria-expanded="false"
       aria-controls="menu-mobile"
       aria-label="Abrir menu"
@@ -56,7 +57,7 @@ const nav = [
     </button>
   </Container>
 
-  <div id="menu-mobile" class="hidden border-t border-line bg-paper md:hidden">
+  <div id="menu-mobile" class="hidden border-t border-line bg-paper lg:hidden">
     <Container class="py-4">
       <nav aria-label="Principal (mobile)">
         <ul class="flex flex-col">

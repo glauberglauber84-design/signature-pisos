@@ -98,3 +98,27 @@ export function collectionLd(name: string, url: string, description: string): Ld
     isPartOf: { '@id': `${absoluteUrl('/')}#site` },
   };
 }
+
+export function articleLd(opts: {
+  headline: string;
+  description: string;
+  url: string;
+  published: Date;
+  modified?: Date;
+  image?: string;
+}): Ld {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: opts.headline,
+    description: opts.description,
+    mainEntityOfPage: opts.url,
+    url: opts.url,
+    datePublished: opts.published.toISOString().slice(0, 10),
+    dateModified: (opts.modified ?? opts.published).toISOString().slice(0, 10),
+    inLanguage: siteConfig.locale,
+    author: { '@id': businessId() },
+    publisher: { '@id': businessId() },
+    ...(opts.image ? { image: opts.image } : {}),
+  };
+}

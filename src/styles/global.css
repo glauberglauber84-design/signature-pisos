@@ -112,3 +112,17 @@
     border: 0;
   }
 }
+
+/* Corpo dos artigos do blog (HTML gerado pelo Markdown). */
+@layer components {
+  .article-body > * + * { margin-top: 1rem; }
+  .article-body h2 { margin-top: 2.5rem; font-size: 1.5rem; }
+  .article-body h3 { margin-top: 2rem; font-size: 1.25rem; }
+  .article-body ul { list-style: disc; padding-left: 1.5rem; }
+  .article-body ol { list-style: decimal; padding-left: 1.5rem; }
+  .article-body li + li { margin-top: 0.5rem; }
+  .article-body a { color: var(--color-accent-strong); text-decoration: underline; }
+  .article-body img { max-width: 100%; height: auto; }
+  .article-body table { display: block; overflow-x: auto; border-collapse: collapse; }
+  .article-body th, .article-body td { border: 1px solid var(--color-line); padding: 0.5rem 0.75rem; text-align: left; }
+}

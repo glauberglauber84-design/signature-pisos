@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import Section from '../../components/Section.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { breadcrumbLd, collectionLd, localBusinessLd } from '../../lib/schema';
+import { absoluteUrl, siteConfig } from '../../config/siteConfig';
+import { formatDate, getPosts } from '../../lib/blog';
+
+const posts = await getPosts();
+const title = 'Blog sobre pisos e revestimentos | Signature Pisos';
+const description = 'Artigos da Signature Pisos sobre pisos e revestimentos: escolha, preparo, instalação e cuidados do dia a dia.';
+const crumbs = [
+  { name: 'Início', path: '/' },
+  { name: 'Blog', path: '/blog/' },
+];
+---
+
+<BaseLayout title={title} description={description} path="/blog/" noindex={posts.length === 0} ld={[localBusinessLd(), breadcrumbLd(crumbs), collectionLd('Blog', absoluteUrl('/blog/'), description)]}>
+  <Breadcrumb items={crumbs} />
+  <Section labelledby="sec-blog">
+    <h1 id="sec-blog" class="text-3xl md:text-4xl">Blog {siteConfig.name}</h1>
+    <p class="mt-4 max-w-prose text-lg text-ink-soft">
+      Artigos sobre pisos e revestimentos: como escolher, preparar, instalar e conservar.
+    </p>
+    {
+      posts.length === 0 ? (
+        <p class="mt-8 max-w-prose rounded-sm border-2 border-line bg-paper p-6 text-base text-graphite">
+          Os primeiros artigos estão em preparação. Enquanto isso, conheça os <a href="/servicos/" class="font-semibold text-accent-strong underline">nossos serviços</a>.
+        </p>
+      ) : (
+        <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {posts.map((p) => (
+            <li class="flex">
+              <a href={`/blog/${p.id}/`} class="flex w-full flex-col overflow-hidden rounded-sm border-2 border-line bg-paper no-underline hover:border-graphite">
+                {p.data.imagem && <img src={p.data.imagem} alt={p.data.imagemAlt ?? ''} width="640" height="480" loading="lazy" class="aspect-[4/3] w-full object-cover" />}
+                <div class="p-6">
+                  <h2 class="text-xl text-graphite">{p.data.titulo}</h2>
+                  <p class="mt-2 text-base text-ink-soft">{p.data.descricao}</p>
+                  <p class="mt-4 text-sm text-ink-soft">{formatDate(p.data.data)}</p>
+                </div>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </Section>
+  <CtaBand />
+</BaseLayout>
